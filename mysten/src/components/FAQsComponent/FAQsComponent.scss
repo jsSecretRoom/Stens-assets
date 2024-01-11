@@ -1,0 +1,88 @@
+.faqs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
+    h2{
+        color: #194484;
+        font-size: 35px;
+    }
+    .FAQs-chapters {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 200px;
+        
+        .left-plank {
+            height: auto;
+            width: 30px;
+            border-radius:  20px 0  0 20px;
+            border-top: 5px solid green;
+            border-left: 5px solid green;
+            border-bottom: 5px solid green;
+            margin: 15px 40px 15px 0;
+        }
+        
+        .rovws-text {
+            flex-grow: 1;
+            ul{
+                color: #0D6EB7;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                li{
+                    list-style-type: disc;
+                    font-size: 20px;
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    text-align: left;
+                    
+                    
+                }
+            }
+        }
+        .right-plank {
+            height: auto;
+            width: 30px;
+            border-radius: 0 20px 20px 0 ;
+            border-top: 5px solid green;
+            border-right: 5px solid green;
+            border-bottom: 5px solid green;
+            margin: 15px 0 15px 40px;
+        }
+    }
+    .state-chapters {
+        width: 100%;
+        padding: 40px 220px;
+        @media (min-width: 1160px) {
+            width: 1560px;
+        }
+        .shou-txt {
+            padding: 10px 0;
+            .main-text {
+                width: auto;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                column-gap: 20px;
+                img{}
+                h2{color: black;
+                font-weight: bold;
+            font-size: 36px;}
+            }
+            .shou-block {
+                border-bottom: 1px solid gray;
+                padding: 20px;
+                p{
+                    text-align: left;
+                    color: black;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+

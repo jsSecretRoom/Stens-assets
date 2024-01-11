@@ -1,0 +1,46 @@
+.portfolio-component {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+    
+    .parafraph-chapter {
+        width: 1130px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        
+        .chapter-img{
+
+            .left-img{
+                border-radius: 10px 0 0 10px;
+            }
+            .rightt-img{
+                border-radius: 0 10px 10px 0;
+            }
+        }
+
+        
+        .paragraph-content {
+            display: flex;
+            text-align: left;
+            padding: 20px;
+            flex-direction: column;
+            a{
+                font-size: 36px;
+            }
+            p{
+                color: black;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+

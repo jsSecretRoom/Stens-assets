@@ -1,0 +1,41 @@
+.home-slider{
+    width: 100%;
+    height: 950px;
+    position: relative;
+    
+    .slick-slider{
+        padding: 0;
+        .slick-list{
+            
+        }
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .info-company{
+        padding: 0 110px;
+        width: 800px;
+        position: absolute;
+        top: 15%;
+        left: 0%;
+        z-index: 2;text-align: left;
+        .paragraph{
+            p{font-size: 16px;}
+        }
+
+    }
+    .button-conteiner{
+        column-gap: 20px;
+        
+        display: flex;
+        button{}
+    }
+
+}
+.slick-dots{
+    
+    position: absolute;
+    bottom: 20%;
+    right: 40%;
+}

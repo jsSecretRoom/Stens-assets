@@ -1,0 +1,98 @@
+.autor-article {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    row-gap: 40px;
+    width: 900px;
+    h2{
+        color: #194484;
+    }
+    .feaces-conteiner {
+        .share {
+        }
+    }
+    .article-img {
+        img{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    }
+    .articl-feaces-footer {
+    }
+    
+    .article-paragraps {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        p{
+            text-align: left;
+            color: black;
+        }
+    }
+    .creator {
+        display: flex;
+        flex-direction: left;
+        flex-direction: column;
+        a{
+            color: #0D6EB7;
+            font-size: 36px;
+            text-align: left;
+        }
+        .about-creator {
+            display: flex;
+            justify-content: space-between;
+            width: 666px;
+            .creator-img {
+                img{}
+            }
+            .creator-information {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-between;
+                padding-left: 20px;
+                .creator-header-conteiner{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    width: 100%;
+                    .creator-header {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 30px;
+                        width: 100%;
+                        p{
+                            color: black;
+                        }
+                        .lincs {
+                            display: flex;
+                            column-gap: 10px;
+                            a{
+                                
+                                img{
+                                    width: 24px;
+                                    
+                                }
+                            }
+                        }
+                    }
+                    
+                    .specialization {
+                        p{
+                            color: black;
+                            
+                        }
+                    }
+                }
+                
+                .creator-title {
+                    p{
+                        text-align: left;
+                        color: black;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,23 @@
+.team-hed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 110px;
+    
+    .join-header {
+        h2{
+            color: #194484;
+        }
+    }
+    .join-img {
+        img{}
+    }
+}
+.openings-conteiner{
+    
+    margin-top: 100px;
+    h2{
+        color: #194484;
+    }
+}

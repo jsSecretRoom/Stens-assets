@@ -1,0 +1,102 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1130px;
+    height: 257px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    &:hover{
+        box-shadow: 0 0 30px rgb(37, 74, 255);
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .pudlication-img {
+        img{
+            border-radius: 10px 0 0 10px;
+        }
+    }
+    .item-blog {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 20px 20px 20px 80px;
+        flex-grow: 1;
+        .fiches {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+            .star-count {
+                display: flex;
+                justify-content: space-between;
+                .star {
+                    padding: 0;
+                    width: auto;
+                    height: auto;
+                    img{
+                        width: 24px;
+                    }
+                }
+            }
+
+            .read-time {
+                display: flex;
+                column-gap: 10px;
+                img{}
+                p{
+                    color: gray;
+                    font-size: 16px;
+                }
+            }
+            .views {
+                display: flex;
+                column-gap: 10px;
+                img{}
+                p{
+                    color: gray;
+                    font-size: 16px;
+                }
+            }
+        }
+        .title-blog-chapter {
+            display: flex;
+            flex-direction: column;
+            
+            h3{
+                color: black;
+                text-align: left;
+                font-size: 32px;
+            }
+            p{
+                text-align: left;
+                font-size: 16px;
+                color: black;
+            }
+        }
+        .autor-information-conteiner {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+            .autor-info {
+                display: flex;
+                align-items: center;
+                border-right: 2px solid gray;
+                padding-right: 20px;
+                img{}
+                p{
+                    color: gray;
+                    font-size: 16px;
+                }
+            }
+            .publication-date {
+                p{
+                    color: gray;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

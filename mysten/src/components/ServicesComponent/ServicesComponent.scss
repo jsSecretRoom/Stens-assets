@@ -1,0 +1,29 @@
+.services {
+    padding: 60px 235px;
+    a{
+        font-size: 40px;
+    }
+    .articcle-conteiner {
+        display: flex;
+        flex-direction: column;
+        column-gap: 20px;
+        row-gap: 20px;
+        .article-group{
+            display: flex;
+            justify-content: space-between;
+            
+            .articcle {
+                text-align: left;
+                a{}
+                p{
+                    color: black;
+                    font-size: 16px;
+                }
+            }
+            .articcle-img {
+                img{}
+            }
+        }   
+
+    }
+}

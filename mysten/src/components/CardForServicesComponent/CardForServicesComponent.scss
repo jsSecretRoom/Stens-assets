@@ -1,0 +1,52 @@
+.card-for-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 110px 210px 110px;
+    @media (min-width: 160px) {
+        width: 1600px;
+    }
+    
+    a{
+        padding: 120px 0 60px 0;
+        font-size: 36px;
+    }
+    
+    .card-conteiner {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        column-gap: 20px;
+        row-gap: 60px;
+        
+        
+        .services-card {
+            width: 322px;
+            height: 322px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 20px;
+            background-color: rgba(29, 51, 107, 0.10);
+            &:hover{
+                background-color: white;
+            }
+
+            img{
+                width: 115px;
+                flex-grow: 1;
+            }
+            .card-paragraph{
+                height: 100px;
+            }
+
+        }
+    }
+}
+
+

@@ -1,0 +1,19 @@
+.evaluate-article {
+
+    .evaluate-conteiner {
+        background-color: #F0F5FC;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: 900px;
+        height: 150px;
+        border-radius: 20px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        p{
+            color: black;
+        }
+    }
+}
+

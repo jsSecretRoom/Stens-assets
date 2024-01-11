@@ -1,0 +1,115 @@
+footer{
+    
+    .background-img{
+        width: 100vi;
+        @media (min-width: 1920px) {
+            width: 1920px;
+        }
+    }
+    
+    .futer-conteiner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        .futer-content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 110px;
+            .content {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                height: 100%;
+                padding-top: 350px;
+                .contact-us-footer {
+                    .stens-img-wite {
+                        padding-bottom: 20px;
+                        img{}
+                    }
+                    .sociall-links {
+                        width: 200px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        column-gap: 40px;
+                        row-gap: 40px;
+                        a{
+                            img {
+                                width: 40px;
+                                filter: brightness(0) invert(1);
+                                transition: filter 0.3s ease;
+                    
+                                &:hover {
+                                    filter: brightness(1) invert(1) hue-rotate(90deg);
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+                .footer-services, .tehnologies, .products, .about-us{
+                    h2{
+                        color: white;
+                        padding-bottom: 20px;
+                        text-align: start;
+                        font-size: 36px;
+                    }
+                    ul{
+                        padding-left: 20px;
+                        li{
+                            text-align: start;
+                            a{
+                                color: white;
+                                font-family: Montserrat;
+                                &:hover{
+                                    color: crimson;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .services{}
+                .tehnologies{}
+                .products{
+                    ul{
+                        li{
+                            a{
+                                font-size: 36px;
+                                font-family: 'Harabara';
+                            }
+                        }
+                    }
+                }
+                .about-us{}
+            }
+
+        }
+        .private-notation{
+            background-color: white;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: gray;
+            width: 100%;
+            .group{
+                width: 40%;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        
+
+    }
+
+   
+}
+

@@ -1,0 +1,52 @@
+.clutch {
+    margin-top: 120px;
+    width: 900px;
+    height: 138px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    .clutch-logo {
+        img{}
+    }
+    .clutch-fica {
+        display: flex;
+        justify-content: space-between;
+        .grade {
+            p{color: black;}
+        }
+        .star-container {
+            .star-count {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .star {
+                    width: auto;
+                    height: auto;
+                    background: none;
+                    padding: 0;
+    
+                }
+            }
+            .Like-line {
+            }
+    
+        }
+        .number-of-voters {
+            color: black;
+        }
+    }
+    .reviews{
+        button{
+            background-color: #06B25F;
+            width: 220px;
+        }
+    }
+    
+    
+}
+
+
+
+

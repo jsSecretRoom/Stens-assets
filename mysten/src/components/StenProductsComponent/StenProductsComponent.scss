@@ -1,0 +1,80 @@
+.sten-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+    padding: 40px 210px;
+    width: 100%;
+    @media (min-width: 1800px) {
+        width: 1800px;
+    }
+    .productCard {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        .img-block {
+            position: relative;
+            
+            img{
+                width: 420px;
+                height: 280px;
+                border-radius: 20px 20px 0 0;
+            }
+            &:hover{
+                .shou-links{
+                    display: flex;
+                }
+            }
+            .shou-links {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: end;
+                border-radius: 20px 20px 0 0;
+                background-color: rgba(0, 0, 0, 0.307);
+
+                .links {
+                    display: flex;
+                    justify-content: space-around;
+                    column-gap: 5px;
+                    height: 70px;
+                    width: 100%;
+                    background-color: white;
+                    a{
+                        flex-grow: 1;
+                        background-color: #84B5FF;
+                        display: flex;
+                        height: auto;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover{
+                            background-color: greenyellow;
+                        }
+                        img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+        .information {
+            width: 420px;
+            height: 140px;
+            border-radius: 0 0 20px 20px;
+            
+            a{}
+            p{
+                color: black;
+                font-size: 16px;
+            }
+        }
+    }
+}
+

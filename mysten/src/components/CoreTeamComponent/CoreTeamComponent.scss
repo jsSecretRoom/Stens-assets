@@ -1,0 +1,45 @@
+.core-Team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h2{
+        color: #194484;
+        padding: 40px 0 60px 0;
+    }
+    .about-team-conteiner {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1224px;
+        row-gap: 60px;
+        column-gap: 50px;
+        .user-card {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            .fteam-foro {
+                width: 322px;
+                img{
+                    border-radius: 20px 20px 0 0;
+                }
+            }
+            .person-information {
+                width: 322px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                a{
+                    text-align: left;
+                }
+                p{
+                    color: black;
+                    text-align: left;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+
+

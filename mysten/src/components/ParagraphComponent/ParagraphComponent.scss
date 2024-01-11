@@ -1,0 +1,21 @@
+.paragraph-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 110px;
+    
+    column-gap: 40px;
+    .paragraph-chapter {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        color: black;
+        text-align: left;
+        row-gap: 40px;
+        
+        h3{
+            color: #0D6EB7;
+        }
+        p{font-size: 16px;}
+    }
+}
+

@@ -1,0 +1,48 @@
+.company-specialization {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 40px;
+    
+
+    p{
+        color: black;
+        text-align: left;
+    }
+    img{}
+    a{}
+    .block-conteiner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        width: 700px;
+        
+        .header-specialization{
+            color: #0D6EB7;
+            text-align: left;
+            width: 560px;
+            font-size: 36px;
+            font-weight: 700;
+        }
+        p{
+            color: black;
+            text-align: left;
+        }
+        a{
+            text-align: left;
+        }
+    }
+    .paragraph-group {
+        h2{
+            color: black;
+            text-align: left;
+        }
+        p{
+            color: black;
+            text-align: left;
+        }
+    }
+}
+
