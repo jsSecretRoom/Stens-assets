@@ -1,0 +1,8 @@
+.contact-button{
+    display: none;
+}
+@media (min-width: 1200px) {
+    .contact-button{
+        display: block;
+    }
+}

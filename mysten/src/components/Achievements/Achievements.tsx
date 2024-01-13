@@ -12,7 +12,7 @@ function Achievements() {
                 <div className="achivements-card">
                     <img src={handsImg} alt="handsImg" />
                     <div className="achivements-text">
-                        <p>50+ successfully launched projects on the the market.</p>
+                        <p>50+ successfully launched projects on the market.</p>
                     </div>
                 </div>
                 <div className="achivements-card">

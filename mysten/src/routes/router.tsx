@@ -35,6 +35,7 @@ export const router = createBrowserRouter([
                 <HeaderComponent/>
                 <PagesContent/>
                 <FuterComponent/>
+                
             </>
         ),
         children: [

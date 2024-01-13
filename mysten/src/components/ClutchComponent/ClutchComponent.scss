@@ -1,52 +1,71 @@
-.clutch {
+.clutch-conteiner{
     margin-top: 120px;
-    width: 900px;
-    height: 138px;
+    padding: 0 28px;
     display: flex;
-    justify-content: space-around;
-    border-radius: 10px;
+    justify-content: center;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    .clutch-logo {
-        img{}
+    width: 100%;
+    @media (min-width: 860px) {
+        padding: 0 110px;
     }
-    .clutch-fica {
+    @media (min-width: 1100px) {
+        padding: 0 210px; 
+    }
+    @media (min-width: 1500px) {
+        padding: 0 410px; 
+    }
+    .clutch {
+        width: 320px;
+        height: 300px;
         display: flex;
-        justify-content: space-between;
-        .grade {
-            p{color: black;}
-        }
-        .star-container {
-            .star-count {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .star {
-                    width: auto;
-                    height: auto;
-                    background: none;
-                    padding: 0;
+        justify-content: space-around;
+        flex-direction: column;
+        border-radius: 10px;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     
+        @media (min-width: 860px) {
+            flex-direction: row;
+            height: 138px;
+            width: 100%;
+        }
+        .clutch-logo {
+            img{}
+        }
+        .clutch-fica {
+            display: flex;
+            justify-content: space-between;
+            .grade {
+                p{color: black;}
+            }
+            .star-container {
+                .star-count {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .star {
+                        width: auto;
+                        height: auto;
+                        background: none;
+                        padding: 0;
+        
+                    }
                 }
+                .Like-line {
+                }
+        
             }
-            .Like-line {
+            .number-of-voters {
+                color: black;
             }
-    
         }
-        .number-of-voters {
-            color: black;
+        .reviews{
+            button{
+                background-color: #06B25F;
+                width: 220px;
+            }
         }
+        
+        
     }
-    .reviews{
-        button{
-            background-color: #06B25F;
-            width: 220px;
-        }
-    }
-    
-    
 }
-
-
-
-

@@ -2,7 +2,11 @@ import './HeaderComponent.scss';
 
 import companyLogo from '../../assets/icon/logoSA_010 1.svg';
 import DropdownComponent from '../DropdownComponent/DropdownComponent';
+
+
 import { NavLink } from 'react-router-dom';
+import ContactsButton from '../../buttonsComponents/ContactsButton/ContactsButton';
+import MainBurgerButton from '../../buttonsComponents/MainBurgerButton/MainBurgerButton';
 
 const serviceNames = [
     "Mobile Application Development",
@@ -29,7 +33,7 @@ const aboutAsName = [
 ];
 
 function HeaderComponent() {
-
+    
     return ( 
         <header>
             <div className='header-conteiner'>
@@ -45,7 +49,8 @@ function HeaderComponent() {
                     <DropdownComponent dropdownName={'About_us'} serviceNames={aboutAsName} />
                 </section>
                 <section className='ficha'>
-                    <button>CONTACT US</button>
+                    <ContactsButton/>
+                    <MainBurgerButton/>
                 </section>
             </div>
         </header>

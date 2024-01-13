@@ -1,6 +1,8 @@
 import './PartnersComponent.scss';
 
 import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+
 
 import partner1 from '../../assets/company-logo/Group 685.svg'
 import partner2 from '../../assets/company-logo/Group 686.svg'
@@ -17,30 +19,47 @@ import partner12 from '../../assets/company-logo/Group 696.svg'
 import partner13 from '../../assets/company-logo/Group 697.svg'
 import partner14 from '../../assets/company-logo/Group 698.svg'
 
-import decorationBacground from '../../assets/decoration/Vector 8.svg';
+import arrou from '../../assets/icon/arrou-Vector.svg';
 
-const CompanyLogos = [partner1, partner2, partner3, partner4, partner5, partner6, partner7, partner8, partner9, partner10, partner11, partner12, partner13, partner14];
+const CompanyLogos = [partner1, partner2, partner3, partner4, partner5, partner6, partner7, partner8, partner9, partner10, partner11, partner12, partner13, partner14, partner14, partner14];
 
 function PartnersComponent() {
-    return ( 
-        <section className='img-deco'>
-            <img className='deco-bacground' src={decorationBacground} alt="decorationBacground" />
-            <section className="partners-info">
-                
-                <NavLink  to={''}>Partners</NavLink>
-                
-                <div className='partners-conteiner'>
-                    {CompanyLogos.map((item, index) => (
-                        <div className="partner" key={index}>
-                            <img src={item} alt="" />
-                            <div className="shedou-effect"></div>
-                        </div>
-                    ))}
-                </div>
+    const [visibleItems, setVisibleItems] = useState(8);
+    const [isActiv, setIsActiv] = useState(true);
+    
+    
+    const handleShowMore = () => {
+        setIsActiv(!isActiv);
 
-            </section>
+        const totalItems = CompanyLogos.length;
+
+        if (isActiv) {
+            setVisibleItems(totalItems);
+        } else {
+            setVisibleItems((prevVisibleItems) => prevVisibleItems - 8);
+        }
+    };
+
+    return ( 
+        <section className="partners-info">
+            <NavLink to={''}>Partners</NavLink>
+            
+            <div className='partners-conteiner'>
+                {CompanyLogos.slice(0, visibleItems).map((item, index) => (
+                    <div className="partner" key={index}>
+                        <img src={item} alt="partner-img" />
+                        <div className="shedou-effect"></div>
+                    </div>
+                ))}
+            </div>
+           
+            
+            <button onClick={handleShowMore}>
+                <p>{isActiv ? 'Show less' : 'Show more'}</p>
+                <img src={arrou} alt="arrou-img" style={{ transform: isActiv ? 'rotate(0deg)' : 'rotate(180deg)' }} />
+            </button>
+            
         </section>
-        
     );
 }
 

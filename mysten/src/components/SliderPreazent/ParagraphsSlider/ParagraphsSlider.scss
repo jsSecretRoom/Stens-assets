@@ -1,0 +1,13 @@
+.paragraph{
+    
+    text-align: left;
+    p{
+        font-size: 16px;
+        color: black;
+    }
+    @media (min-width: 768px) {
+        p{
+            color: white;
+        }
+    }
+}

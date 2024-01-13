@@ -39,6 +39,7 @@ main{
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
   
   @media (min-width: 1920px) {
     width: 1920px;

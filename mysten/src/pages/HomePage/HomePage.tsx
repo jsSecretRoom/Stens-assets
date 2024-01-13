@@ -7,16 +7,36 @@ import ForPartnerComponent from "../../components/ForPartnerComponent/ForPartner
 import Achievements from "../../components/Achievements/Achievements";
 import PartnersComponent from "../../components/PartnersComponent/PartnersComponent";
 import ContactsComponent from "../../components/ContactsComponent/ContactsComponent";
+
+import { useState } from "react";
+import { faindWidthWindow } from "../../reuseFunctions";
+import ParagraphsSlider from "../../components/SliderPreazent/ParagraphsSlider/ParagraphsSlider";
+
+import './HomePage.scss';
+import decoHeader from '../../assets/company-logo/header-decoration.svg';
+import decoFooter from '../../assets/company-logo/footer-Decoration.svg';
+
+
 function HomePage() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    faindWidthWindow(setWindowWidth);
+
     return ( 
         <Fragment>
             <SliderPreazent/>
+            <div style={{margin: '28px'}}>
+                {(windowWidth < 1080) ? <ParagraphsSlider/> : '' } 
+            </div>
             <TechnologiesChapter/>
             <ClutchComponent/>
             <ServicesComponent/>
             <ForPartnerComponent/>
             <Achievements/>
-            <PartnersComponent/>
+            <section className='parther-setings'>
+                <div className="deco-header"><img src={decoHeader} alt="decoHeader" /></div>
+                <PartnersComponent/>
+                <div className="deco-footer"><img src={decoFooter} alt="decoFooter" /></div>
+            </section>
             <ContactsComponent/>
         </Fragment>
     );

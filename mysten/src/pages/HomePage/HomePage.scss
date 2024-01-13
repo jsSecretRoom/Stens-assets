@@ -1,0 +1,16 @@
+.parther-setings{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .deco-header, .deco-footer {
+        img{
+            width: 1920px;
+        }
+    }
+}

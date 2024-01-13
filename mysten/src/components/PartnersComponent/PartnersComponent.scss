@@ -1,52 +1,110 @@
-.img-deco{
-    width: 100vw;
-    height: 1400px;
-    position: relative;
+.partners-info {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    @media (min-width: 1600px) {
-        width: 1600px;
+    padding: 0 140px;
+    background-color: #b8ccff22;
+    a{
+        font-size: 36px;
+        text-align: center;
+        
     }
 
-    .deco-bacground{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }   
+    .partners-conteiner{
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 400px;
 
-    .partners-info {
-        a{
-            font-size: 36px;
-            text-align: center;
-            
-        }
-    
-        .partners-conteiner{
-            margin-top: 60px;
-            display: grid;
+        column-gap: 20px;
+        row-gap: 20px;
+
+        @media (min-width: 600px) {
             width: 100%;
-            grid-template-columns: auto auto auto auto;
-            grid-template-rows: auto auto auto auto;
-            column-gap: 20px;
-            row-gap: 20px;
-            .partner {
-                position: relative;
-                background-color: white;
-                img{
-                }    
-                .shedou-effect {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: 1;
-                    background-color: rgba(101, 190, 190, 0.258);
+        }
+
+        .partner {
+            position: relative;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(75, 75, 75, 0.633);
+
+            &:nth-child(even) {
+                opacity: 0;
+                transform: translateX(60px);
+                transform: translateY(-60px);
+                animation: fadeIn 1s forwards;
+    
+                animation: fadeInEven 1s forwards;
+    
+                @keyframes fadeInEven {
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                        transform: translateY(0);
+                        height: auto;
+                    }
                 }
             }
+            
+            &:nth-child(odd) {
+                opacity: 0;
+                transform: translateX(-60px);
+                transform: translateY(60px);
+                animation: fadeIn 1s forwards;
+    
+                animation: fadeInOdd 1s forwards;
+    
+                
+                @keyframes fadeInOdd {
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                        transform: translateY(0);
+                        height: auto;
+                    }
+                }
+            }
+
+            &:hover{
+                box-shadow: 0 0 10px rgb(17, 49, 255);
+                scale: 1.05;
+            }
+
+            img{
+                width: 146px;
+                border-radius: 10px;
+                @media (min-width: 1340px) {
+                    width: auto;
+                }
+            }    
+            .shedou-effect {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background-color: rgba(101, 190, 190, 0.258);
+            }
+        }
+
+
+    }
+    button{
+        margin: 30px;
+        background-color: none;
+        color: black;
+        font-size: 22px;
+        width: auto;
+        box-shadow: 0 0 10px rgba(75, 75, 75, 0.633);
+        p{
+            color: black;
+        }
+        img{
+            margin-left: 20px;
         }
     }
-    
 }
+    
+

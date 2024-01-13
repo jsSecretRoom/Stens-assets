@@ -15,8 +15,8 @@
     .platforms-devlopeng {
         display: flex;
         justify-content: space-between;
+        column-gap: 40px;
         
-        width: 400px;
         button{
             width: 64px;
             height: 64px;
