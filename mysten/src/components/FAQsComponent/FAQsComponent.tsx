@@ -27,7 +27,6 @@ const mainText = [
 
 function FAQsComponent() {
 
-
     return ( 
         <section className='faqs'>
             <h2>FAQ’s</h2>

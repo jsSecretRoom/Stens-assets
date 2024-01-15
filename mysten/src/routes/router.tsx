@@ -12,7 +12,7 @@ import ServicesPage from '../pages/ServicesPage/ServicesPage';
 import ProductsPage from '../pages/ProductsPage/ProductsPage';
 import PortfolloPage from '../pages/PortfolloPage/PortfolloPage';
 import BlogPage from '../pages/BlogPage/BlogPage';
-import About_usPage from '../pages/About_usPage/About_usPage';
+// import About_usPage from '../pages/About_usPage/About_usPage';
 import TeamPage from '../pages/TeamPage/TeamPage';
 import JoinTheTeamPage from '../pages/JoinTheTeamPage/JoinTheTeamPage';
 import ContactsPage from '../pages/ContactsPage/ContactsPage';

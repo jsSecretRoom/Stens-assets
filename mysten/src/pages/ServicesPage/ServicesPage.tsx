@@ -10,6 +10,9 @@ import RecentProjectSlider from "../../components/RecentProjectSlider/RecentProj
 import FAQsComponent from "../../components/FAQsComponent/FAQsComponent";
 import MiniNavigationSystem from "../../components/MiniNavigationSystem/MiniNavigationSystem";
 
+import decoHeader from '../../assets/company-logo/header-decoration.svg';
+import decoFooter from '../../assets/company-logo/footer-Decoration.svg';
+
 function ServicesPage() {
     return ( 
         
@@ -23,7 +26,12 @@ function ServicesPage() {
             <ForPartnerComponent/>
             <ParagraphComponent/>
             <ContactsComponent/>
-            <RecentProjectSlider/>
+            <section className='parther-setings'>
+                <div className="deco-header"><img src={decoHeader} alt="decoHeader" /></div>
+                    <RecentProjectSlider/>
+                <div className="deco-footer"><img src={decoFooter} alt="decoFooter" /></div>
+            </section>
+            
             <FAQsComponent/>
         </Fragment>
         

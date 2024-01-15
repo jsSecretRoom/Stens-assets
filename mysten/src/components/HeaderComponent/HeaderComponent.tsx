@@ -1,10 +1,11 @@
 import './HeaderComponent.scss';
 
 import companyLogo from '../../assets/icon/logoSA_010 1.svg';
+import companyLogoNegativ from '../../assets/icon/company-logo-negativ.svg';
 import DropdownComponent from '../DropdownComponent/DropdownComponent';
 
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import ContactsButton from '../../buttonsComponents/ContactsButton/ContactsButton';
 import MainBurgerButton from '../../buttonsComponents/MainBurgerButton/MainBurgerButton';
 
@@ -33,19 +34,21 @@ const aboutAsName = [
 ];
 
 function HeaderComponent() {
-    
+    const location = useLocation();
+    const pathnames = location.pathname;
+
     return ( 
         <header>
-            <div className='header-conteiner'>
+            <div className='header-conteiner' style={{backgroundColor: `${(pathnames === '/home') ? 'rgba(0, 0, 0, 0.5)' : 'rgb(255, 255, 255)'}`}}>
                 <section className='logo'>
-                    <img src={companyLogo} alt="companyLogo" />
+                <img src={`${(pathnames === '/home' ? companyLogo : companyLogoNegativ) }`} alt="companyLogo" />
                 </section>
                 <section className='main-list'>
                     <DropdownComponent dropdownName={'Services'} serviceNames={serviceNames} />
                     <DropdownComponent dropdownName={'Technologies'} serviceNames={technologiesName} />
-                    <NavLink to={'/home/Products'}>PRODUCTS</NavLink>
-                    <NavLink to={'/home/Portfolio'}>PORTFOLIO</NavLink>
-                    <NavLink to={'/home/Blog'}>BLOG</NavLink>
+                    <NavLink className={`link-info ${(pathnames === '/home') ? '' : 'deco'}`} to={'/home/Products'}>PRODUCTS</NavLink>
+                    <NavLink className={`link-info ${(pathnames === '/home') ? '' : 'deco'}`} to={'/home/Portfolio'}>PORTFOLIO</NavLink>
+                    <NavLink className={`link-info ${(pathnames === '/home') ? '' : 'deco'}`} to={'/home/Blog'}>BLOG</NavLink>
                     <DropdownComponent dropdownName={'About_us'} serviceNames={aboutAsName} />
                 </section>
                 <section className='ficha'>

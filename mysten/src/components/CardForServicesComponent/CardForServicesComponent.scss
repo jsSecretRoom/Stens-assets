@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     padding: 0 110px 210px 110px;
-    @media (min-width: 160px) {
+    @media (min-width: 1600px) {
         width: 1600px;
     }
     
@@ -20,11 +20,11 @@
         
         column-gap: 20px;
         row-gap: 60px;
-        
+        min-width: 320px;
         
         .services-card {
-            width: 322px;
-            height: 322px;
+            width: 145px;
+            height: auto;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             display: flex;
@@ -33,16 +33,28 @@
             justify-content: space-between;
             border-radius: 20px;
             background-color: rgba(29, 51, 107, 0.10);
+            @media (min-width: 768px) {
+               width: 322px;
+               height: 322px;
+            }
             &:hover{
                 background-color: white;
+                scale: 1.05;
             }
 
             img{
-                width: 115px;
+                width: 90px;
+                @media (min-width: 768px) {
+                    width: 115px;
+                    
+                }
                 flex-grow: 1;
             }
             .card-paragraph{
                 height: 100px;
+                a{
+                    font-size: 20px;
+                }
             }
 
         }

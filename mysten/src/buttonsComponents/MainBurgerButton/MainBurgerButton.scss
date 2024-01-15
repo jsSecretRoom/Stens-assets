@@ -1,15 +1,38 @@
 .main-button{
-    display: block;
-    border: 2px solid rgba(255, 255, 255, 0);
+
+    padding: 5px;
     width: auto;
-    padding: 0 10px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 2px solid rgba(255, 255, 255, 0);
+    
     margin: 0;
 
     &:hover{
         border: 2px solid white;
+        background-color: rgba(0, 0, 0, 0);
     }
 
-    img{}
+    .top-plank, .midle-plank, .bottom-plank {
+        background-color: white;
+        height: 5px;
+        width: 40px;
+        border-radius: 50px;
+    }
+    .top-plank.deco, .midle-plank.deco, .bottom-plank.deco {
+        background-color: blue;
+
+    }
+    .top-plank {
+    }
+    .midle-plank {
+    }
+    .bottom-plank {
+    }
+    
+
 }
 @media (min-width: 1000px) {
     .main-button{

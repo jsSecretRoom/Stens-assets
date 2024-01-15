@@ -1,7 +1,11 @@
 .navigation-sestem {
-    padding: 120px 110px 0 110px;
-
+    padding: 120px 28px 0 28px;
     width: 100%;
+
+    @media (min-width: 768px) {
+        padding: 120px 110px 0 110px;
+    }
+
     ul{
         display: flex;
         column-gap: 10px;
@@ -15,8 +19,16 @@
                 column-gap: 10px;
                 font-family: 'Harabara';
                 
-                font-size: 22px;
-                a{}
+                font-size: 12px;
+                @media (min-width: 768px) {
+                    font-size: 22px;
+                }
+                a{
+                    font-size: 12px;
+                    @media (min-width: 768px) {
+                        font-size: 22px;
+                    }
+                }
                 img{
                     width: 7px;
                 }

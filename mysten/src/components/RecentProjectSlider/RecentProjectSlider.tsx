@@ -1,11 +1,11 @@
 import Slider from 'react-slick';
 import { NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './RecentProjectSlider.scss';
 
-import decoBacgground from '../../assets/decoration/Vector 8.svg'
 import slide1 from '../../assets/recent-slider-img/Group 700.png'
 import slide2 from '../../assets/recent-slider-img/Mask Group.png'
 import slide3 from '../../assets/recent-slider-img/image 3.png'
@@ -30,61 +30,84 @@ const sliders = [
 ]
 
 function RecentProjectSlider() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [sliderCount, setSliderCount] = useState(3);
 
+    useEffect(() => {
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+    }, []); // Пустой массив зависимостей означает, что эффект будет запущен только один раз при монтировании
+    
+    useEffect(() => {
+        if (windowWidth < 1024) {
+          setSliderCount(1);
+        } else if (windowWidth < 1450) {
+          setSliderCount(2);
+        } else {
+          setSliderCount(3); // Возвращаем значение по умолчанию, если не выполняется ни одно из условий
+        }
+    }, [windowWidth]);
+    
     const settings = {
         dots: true,
         infinite: true,
         speed: 1500,
-        slidesToShow: 3,
+        slidesToShow: sliderCount,
         slidesToScroll: 1,
-        pauseOnHover: true,
+        pauseOnHover: false,
         autoplay: true,
-        autoplaySpeed: 7000,
+        autoplaySpeed: 5000,
     }
 
     return ( 
-        <section className='ricent-slider-conteioner'>
-            <img src={decoBacgground} alt="decoBacgground" />
-            <div className='slider-conteiner'>
-                <div className='slider'>
-                    <NavLink to={''}>Recent Projects</NavLink>
-                    <Slider {...settings}>
+        
+        <section className='slider-conteiner'>
+            <div className='slider'>
+                <NavLink to={''}>Recent Projects</NavLink>
+                <Slider {...settings}>
 
-                        {sliders.map((item, id) => (
-                            <div>
-                                <div className='ricent-slider'>
-                                    <div className='foto'>
-                                        <img src={item.img} alt={`slide${id}`} />
-                                    </div>
-                                    <div className='description'>
-                                        <NavLink to={''}>{item.header}</NavLink>
-                                        <div className='parafraph-conteiner'>
-                                            <p>{item.paragraph}</p>
-                                        </div>
+                    {sliders.map((item, id) => (
+                        <div>
+                            <div className='ricent-slider'>
+                                <div className='foto'>
+                                    <img src={item.img} alt={`slide${id}`} />
+                                </div>
+                                <div className='description'>
+                                    <NavLink to={''}>{item.header}</NavLink>
+                                    <div className='parafraph-conteiner'>
+                                        <p>{item.paragraph}</p>
                                     </div>
                                 </div>
                             </div>
-                        ))} 
-                        {sliders.map((item, id) => (
-                            <div>
-                                <div className='ricent-slider'>
-                                    <div className='foto'>
-                                        <img src={item.img} alt={`slide${id}`} />
-                                    </div>
-                                    <div className='description'>
-                                        <NavLink to={''}>{item.header}</NavLink>
-                                        <div className='parafraph-conteiner'>
-                                            <p>{item.paragraph}</p>
-                                        </div>
+                        </div>
+                    ))} 
+                    {sliders.map((item, id) => (
+                        <div>
+                            <div className='ricent-slider'>
+                                <div className='foto'>
+                                    <img src={item.img} alt={`slide${id}`} />
+                                </div>
+                                <div className='description'>
+                                    <NavLink to={''}>{item.header}</NavLink>
+                                    <div className='parafraph-conteiner'>
+                                        <p>{item.paragraph}</p>
                                     </div>
                                 </div>
                             </div>
-                        ))} 
+                        </div>
+                    ))} 
 
-                    </Slider>
-                </div>
+                </Slider>
             </div>
         </section>
+        
     );
 }
 

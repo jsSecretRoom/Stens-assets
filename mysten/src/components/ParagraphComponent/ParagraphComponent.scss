@@ -1,9 +1,13 @@
 .paragraph-block {
     display: flex;
     justify-content: space-between;
-    padding: 0 110px;
-    
+    flex-direction: column;
+    padding: 0 28px;
     column-gap: 40px;
+    @media (min-width: 768px) {
+        padding: 0 110px;
+        flex-direction: row;
+    }
     .paragraph-chapter {
         display: flex;
         justify-content: space-around;
@@ -11,6 +15,7 @@
         color: black;
         text-align: left;
         row-gap: 40px;
+        padding-bottom: 60px;
         
         h3{
             color: #0D6EB7;

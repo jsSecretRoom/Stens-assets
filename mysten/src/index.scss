@@ -157,9 +157,12 @@ input{
   font-weight: 700;
   padding: 0 10px;
   margin: 2px;
-  width: 340px;
+  width: 240px;
   height: 40px;
   border: 1px solid gray;
+  @media (min-width: 400px) {
+    width: 340px;
+  }
 }
 
 input:active{
@@ -176,10 +179,14 @@ input::-ms-clear {
 textarea{
   border: 1px solid gray;
   border-radius: 5px;
-  width: 340px;
+  width: 100%;
+  max-width: 240px;
   height: 100px;
   padding: 10px 0  0 10px;
   font-size: 16px;
+  @media (min-width: 400px) {
+    max-width: 340px;
+  }
 }
 
 /*--------------------*/
@@ -189,7 +196,7 @@ button {
   border: 2px solid white;
   margin: 5px 0px;
   padding: 5px 25px;
-  width: 175px;
+  width: 240px;
   height: 42px;
   background: none;
   color: #ffffff;
@@ -201,6 +208,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (min-width: 400px) {
+    width: 340px;
+  }
 }
 
 button:hover {

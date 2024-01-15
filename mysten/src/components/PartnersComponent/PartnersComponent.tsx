@@ -44,7 +44,7 @@ function PartnersComponent() {
         <section className="partners-info">
             <NavLink to={''}>Partners</NavLink>
             
-            <div className='partners-conteiner'>
+            <div className="partners-container">
                 {CompanyLogos.slice(0, visibleItems).map((item, index) => (
                     <div className="partner" key={index}>
                         <img src={item} alt="partner-img" />
@@ -55,7 +55,7 @@ function PartnersComponent() {
            
             
             <button onClick={handleShowMore}>
-                <p>{isActiv ? 'Show less' : 'Show more'}</p>
+                <p>{isActiv ? 'Show more' : 'Show less'}</p>
                 <img src={arrou} alt="arrou-img" style={{ transform: isActiv ? 'rotate(0deg)' : 'rotate(180deg)' }} />
             </button>
             

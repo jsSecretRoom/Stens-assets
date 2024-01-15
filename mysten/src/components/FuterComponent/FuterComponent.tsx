@@ -2,7 +2,7 @@ import './FuterComponent.scss';
 
 import { NavLink } from 'react-router-dom';
 
-import futerBacground from '../../assets/icon/FOOTER.svg';
+import futerCap from '../../assets/decoration/footer-Cap.svg';
 
 import stenImgWite from '../../assets/icon/stensasset-white.svg';
 
@@ -16,8 +16,9 @@ function FuterComponent() {
     return ( 
         <footer>
             <section className='futer-conteiner'>
-                <img className='background-img' src={futerBacground} alt="futerBacground" />
+                <img src={futerCap} alt="futerCap" />
                 <div className='futer-content'>
+                    
                     <section className='content'>
                         <div className='contact-us-footer'>
                             <div className='stens-img-wite'>
@@ -68,12 +69,13 @@ function FuterComponent() {
                         </div>
                     </section>
                 </div>
-                <div className='private-notation'>
-                    <p>© 2021 - Stan’s Assets. All Right Reserved</p>
-                    <div className='group'>
-                        <p>Privacy policy</p>
-                        <p>Cookies policy</p>
-                    </div>
+
+            </section>
+            <section className='private-notation'>
+                <p className='copy-right'>© 2021 - Stan’s Assets. All Right Reserved</p>
+                <div className='group'>
+                    <p>Privacy policy</p>
+                    <p>Cookies policy</p>
                 </div>
             </section>
         </footer>

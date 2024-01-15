@@ -1,6 +1,15 @@
 .contact-button{
+    width: auto;
     display: none;
 }
+.contact-button.deco{
+    border-color: #06B25F;
+    color: #06B25F;
+    &:hover{
+        color: white;
+    }
+}
+
 @media (min-width: 1200px) {
     .contact-button{
         display: block;

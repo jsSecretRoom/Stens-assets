@@ -1,0 +1,20 @@
+.contacts-list{
+    .contacts-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        row-gap: 20px;
+        li{
+            display: flex;
+            column-gap: 20px;
+            text-align: left;
+            
+            img{}
+            p{
+                color: black;
+            }
+        }
+        
+    }
+}

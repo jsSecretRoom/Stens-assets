@@ -18,14 +18,14 @@ function MiniNavigationSystem() {
         const isLast = i === pathSegments.length - 1;
         const encodedSegment = decodeURIComponent(pathSegments[i]);
 
-        if(currentPath == '/Home/Services'){
-            currentPath = '/Home/Services/Mobile%20Application%20Development';
+        if(currentPath == '/home/Services'){
+            currentPath = '/home/Services/Mobile%20Application%20Development';
         }
-        if(currentPath == '/Home/Technologies'){
-            currentPath = '/Home/Technologies/Android%20Technologies';
+        if(currentPath == '/home/Technologies'){
+            currentPath = '/home/Technologies/Android%20Technologies';
         }
-        if(currentPath == '/Home/About_us'){
-            currentPath = '/Home/About_us/Specialization';
+        if(currentPath == '/home/About_us'){
+            currentPath = '/home/About_us/Specialization';
         }
 
         breadcrumbs.push(

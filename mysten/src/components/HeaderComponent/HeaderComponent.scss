@@ -30,12 +30,23 @@ header{
         }
         
         .main-list {
-            
+            padding: 0 20px;
             display: none;
             column-gap: 20px;
             justify-content: space-around;
-            a{
+
+            .link-info{
                 font-size: 16px;
+                color: white;
+                &:hover{
+                    color: crimson;
+                }
+            }
+            .link-info.deco{
+                color: blue;
+                &:hover{
+                    color: crimson;
+                }
             }
             
         }

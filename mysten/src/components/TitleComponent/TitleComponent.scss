@@ -2,19 +2,31 @@
     color: black;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     width: 100%;
     align-items: center;
-    padding: 0 110px;
+    padding: 0 28px;
+
+    @media (min-width: 1100px) {
+        padding: 0 110px;
+    }
+
+    @media (min-width: 1100px) {
+        flex-direction: row;
+    }
     .left {
         
         p{
-            font-size: 44px;
+            font-size: 38px;
             color: #194484;
             font-family: 'Harabara';
             
         }
     }
     .right {
+        img{
+            width: 100%;
+        }
     }
     
 }
