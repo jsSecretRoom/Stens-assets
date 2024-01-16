@@ -28,6 +28,8 @@ const chouseImg = {
     '/home/Technologies/Android%20Technologies': androidImg,
     '/home/Technologies/iOS%20Technologies': iosImg,
     '/home/Technologies/Unity%20Technologies': unityImg,
+    '/home/Products': unityImg,
+    '/home/Portfolio': deco2,
 
 }
 

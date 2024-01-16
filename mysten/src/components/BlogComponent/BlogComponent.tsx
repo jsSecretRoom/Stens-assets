@@ -16,17 +16,16 @@ const blogItems = Array.from({ length: 10 }, (_, index) => ({
 }));
 
 function BlogComponent() {
-    return ( 
+    return (  
         <section  className='stens-blog'>
             <NavLink to={''}>Blog</NavLink>
-            <img src={decoBacgroundBlog} className='baground-deco-blog' alt="decoBacgroundGlog" />
             <div className='blog-items'>
-            {blogItems.map((item) => (
-                <BlogItem key={item.id} {...item} />
-            ))}
+                {blogItems.map((item) => (
+                    <BlogItem key={item.id} {...item} />
+                ))}
             </div>
         </section>
-     );
+    );
 }
 
 export default BlogComponent;

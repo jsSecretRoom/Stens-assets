@@ -6,10 +6,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    overflow-x: hidden;
+    
 
     .deco-header, .deco-footer {
+        
+        
         img{
+            
             width: 1920px;
         }
     }

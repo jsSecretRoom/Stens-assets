@@ -1,34 +1,62 @@
 .item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1130px;
-    height: 257px;
+    flex-direction: column;
+    width: 315px;
+    height: 100%;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+    
     &:hover{
         box-shadow: 0 0 30px rgb(37, 74, 255);
         transform: scale(1.05);
         transition: transform 0.3s ease-in-out;
     }
 
+    @media (min-width: 500px) {
+        width: 100%;
+    }
+
+    @media (min-width: 800px) {
+        flex-direction: row;
+    }
+
     .pudlication-img {
         img{
+            width: 100%;
+            overflow-y: hidden;
             border-radius: 10px 0 0 10px;
+            border-radius: 10px;
+            @media (min-width: 800px) {
+                width: auto;
+            }
         }
     }
+
     .item-blog {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         row-gap: 10px;
-        padding: 20px 20px 20px 80px;
-        flex-grow: 1;
+        height: auto;
+        padding: 20px;
+
+        @media (min-width: 500px) {
+            height: 257px;
+        }
+        
+        
+        @media (min-width: 1150px) {
+            padding: 20px 20px 20px 80px;
+        }
         .fiches {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             column-gap: 20px;
+            
+            
             .star-count {
                 display: flex;
                 justify-content: space-between;
@@ -42,44 +70,54 @@
                 }
             }
 
-            .read-time {
+            .rest-feches{
                 display: flex;
-                column-gap: 10px;
-                img{}
-                p{
-                    color: gray;
-                    font-size: 16px;
+                align-items: center;
+                column-gap: 20px;
+
+                .read-time {
+                    display: flex;
+                    column-gap: 10px;
+                    img{}
+                    p{
+                        color: gray;
+                        font-size: 16px;
+                        
+                    }
+                }
+                .views {
+                    display: flex;
+                    column-gap: 10px;
+                    img{}
+                    p{
+                        color: gray;
+                        font-size: 16px;
+                    }
                 }
             }
-            .views {
-                display: flex;
-                column-gap: 10px;
-                img{}
-                p{
-                    color: gray;
-                    font-size: 16px;
-                }
-            }
+
+
         }
         .title-blog-chapter {
-            display: flex;
-            flex-direction: column;
-            
+
             h3{
                 color: black;
-                text-align: left;
                 font-size: 32px;
-            }
-            p{
                 text-align: left;
+                
+            }
+
+            p{
                 font-size: 16px;
                 color: black;
+                text-align: left;
             }
         }
         .autor-information-conteiner {
             display: flex;
             align-items: center;
             column-gap: 20px;
+            
             .autor-info {
                 display: flex;
                 align-items: center;

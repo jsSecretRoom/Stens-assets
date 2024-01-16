@@ -20,7 +20,6 @@ body {
   justify-content: center;
   width: 100%;
   overflow-x: hidden;
-  
 
   background: url('./assets//img/bacground2.png') no-repeat center center fixed;
   background-size: cover;
@@ -40,7 +39,7 @@ main{
   flex-direction: column;
   align-items: center;
   position: relative;
-  
+  overflow-x: hidden;
   @media (min-width: 1920px) {
     width: 1920px;
   }

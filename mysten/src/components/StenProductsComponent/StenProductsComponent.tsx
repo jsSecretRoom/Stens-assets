@@ -63,7 +63,7 @@ const stensProductCard = [
     },
 ];
 
-function StenProductsComponent() {
+function StenProductsComponent() { 
     return ( 
         <section className='sten-products'>
             {stensProductCard.map((item, index) => (

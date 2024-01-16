@@ -1,28 +1,22 @@
 .stens-blog {
-    position: relative;
-    width: 1920px;
-    height: 3200px;
-    overflow-y: hidden;
+    background-color: #b8ccff22;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     a{
         font-size: 36px;
     }
-    .baground-deco-blog{
-        width: 1920px;
-    }
-
     .blog-items {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         row-gap: 40px;
-        width: 100%;
-        height: 100%;
-        
+        padding: 0 20px;
+        width: 100vi;
+        @media (min-width: 1220px) {
+            width: 1220px;
+        }
     }
 }
 
