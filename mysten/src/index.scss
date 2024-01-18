@@ -229,6 +229,11 @@ button::-moz-focus-inner {
   border: 0;
 }
 
+//изменения обводки кнопки при клике на неї
+button:focus, input:focus {
+  outline: 2px solid rgba(0, 0, 255, 0);
+}
+
 /*--------------------*/
 
 /* Ширина скроллбара */

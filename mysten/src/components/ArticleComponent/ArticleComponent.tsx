@@ -1,30 +1,56 @@
-import { NavLink } from 'react-router-dom';
+
 import './ArticleComponent.scss';
 
 import EvaluateArticle from '../EvaluateArticle/EvaluateArticle';
 
-import autorimg from '../../assets/aticle/autorimg.svg';
-import fasebook from '../../assets/aticle/facebucGray.svg';
-import linkedin from '../../assets/aticle/linkedin-gray.svg';
+
 import share from '../../assets/icon/share 1.svg';
 import articleimg from '../../assets/aticle/Frame 7.svg';
-
+import GradeArticleComponent from '../BlogComponent/GradeArticleComponent/GradeArticleComponent';
+import ReadTimeArticleComponent from '../BlogComponent/ReadTimeArticleComponent/ReadTimeArticleComponent';
+import WiewsCountComponent from '../BlogComponent/WiewsCountComponent/WiewsCountComponent';
+import AuthorInfoComponent from '../BlogComponent/AuthorInfoComponent/AuthorInfoComponent';
+import ArticleDateComponent from '../BlogComponent/ArticleDateComponent/ArticleDateComponent';
+import ArticleCreatorComponent from '../BlogComponent/ArticleCreatorComponent/ArticleCreatorComponent';
 
 
 
 function ArticleComponent() {
+
+    const autorimg2 = '../../assets/aticle/autorimg.svg'
+    const author = 'Andrew Williams';
+
     return ( 
         <section className='autor-article'>
             <h2>article 1</h2>
             <div className='feaces-conteiner'>
-                <div>{/* feches blockk!!!! component wont be hear */}</div>
-                <div className='share'><img src={share} alt="share" /></div>
+                <div className='article-fiches'>
+
+                    <GradeArticleComponent/>
+                    <div className='group-conteiner'>
+                        <div className='rest-group'>
+                            <ReadTimeArticleComponent/>
+                            <WiewsCountComponent/>
+                        </div>
+
+
+                        <button className='share'>
+                            <img src={share} alt="share" />
+                        </button>
+                    </div>
+
+                    
+                </div>
+
             </div>
             
             <div className='article-img'>
                 <img src={articleimg} alt="articleimg" />
             </div>
-            <div className='articl-feaces-footer'></div>
+            <div className='articl-feaces-footer'>
+                <AuthorInfoComponent autorImg={autorimg2} author={author}/>
+                <ArticleDateComponent/>
+            </div>
             
             <div className='article-paragraps'>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit. Vivamus mollis, odio ac finibus rutrum, libero augue venenatis leo, in maximus ipsum dui et est. In in aliquet libero. In ac enim non lectus convallis feugiat. </p>
@@ -36,33 +62,10 @@ function ArticleComponent() {
                 <p>Fusce consectetur vel urna ut venenatis. Etiam in mauris odio. Phasellus sed turpis vitae justo maximus suscipit in ut risus. Quisque viverra magna lorem, et placerat velit cursus quis. </p>
                 <p>Maecenas venenatis molestie eros, in pulvinar urna elementum quis. Praesent a lorem quis sem cursus feugiat sed nec erat.    Maecenas venenatis molestie eros, in pulvinar urna elementum quis. Praesent a lorem quis sem cursus feugiat sed nec erat.</p>
             </div>
-            <EvaluateArticle/>
-            <div className='creator'>
-                <NavLink to={'/home/Blog/Article/Author'}>about the author</NavLink>
-                <div className='about-creator'>
-                    <div className='creator-img'>
-                        <img src={autorimg} alt="autorimg" />
-                    </div>
-                    <div className='creator-information'>
-                        <div className='creator-header-conteiner'>
-                            <div className='creator-header'>
-                                <p>Andrew Williams</p>
-                                <div className='lincs'>
-                                    <NavLink to={''}><img src={fasebook} alt="fasebook" /></NavLink>
-                                    <NavLink to={''}><img src={linkedin} alt="linkedin" /></NavLink>
-                                </div>
-                            </div>
-                            <div className='specialization'>
-                                <p>SEO</p>
-                            </div>
-                        </div>
 
-                        <div className='creator-title'>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit. Vivamus mollis, odio ac finibus rutrum.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <EvaluateArticle/>
+            <ArticleCreatorComponent/>
+            
         </section>
     );
 }

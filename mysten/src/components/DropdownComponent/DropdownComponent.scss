@@ -8,6 +8,10 @@
         justify-content: center;
         align-items: center;
         font-family: 'Harabara';
+
+        &:hover{
+            text-decoration:underline;
+        }
     }
 
     .dropdown-content {
@@ -25,7 +29,7 @@
         a{
             font-size: 16px;
             text-align: left;
-            color: white;
+            color: rgb(255, 255, 255);
             &:hover{
                 color: #49C7FA;
             }

@@ -10,15 +10,17 @@ import errorImg from '../../assets/icon/404arrir-img.svg';
 function ErrorPage() {
     return ( 
         <Fragment>
-            <section className="error-conteiner">
-                <img src={errorImg} alt="errorImg" />
-                <div className="deskription">
-                    <h2> it looks like you are lost</h2>
-                    <NavLink to={'/home'}>Return to homepage</NavLink>
+            <main className='error-page'>
+                <div className="error">
+                    <img src={errorImg} alt="errorImg" />
+                    <div className="deskription">
+                        <h2> it looks like you are lost</h2>
+                        <NavLink to={'/home'}>Return to homepage</NavLink>
+                    </div>
                 </div>
-            </section>
-            <ForPartnerComponent/>
-            <ContactsComponent/>
+                <ForPartnerComponent/>
+                <ContactsComponent/>
+            </main>
         </Fragment>
     );
 }

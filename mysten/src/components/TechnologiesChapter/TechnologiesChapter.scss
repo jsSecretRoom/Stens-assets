@@ -18,20 +18,34 @@
         justify-content: space-between;
         column-gap: 40px;
         
-        button{
+        a{
             width: 64px;
             height: 64px;
             border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 60%;
+            }
         }
         .androidico {
             background-color: #06B25F;
+            transition: transform 0.3s ease-in-out;
         }
         .apleico {
             background-color: #276ED8;
+            transition: transform 0.3s ease-in-out;
         }
         .unityico {
             background-color: #84B5FF;
+            transition: transform 0.3s ease-in-out;
         }
+
+        .androidico:hover, .apleico:hover, .unityico:hover {
+            transform: scale(1.2);
+            
+        }
+
     }
 
     

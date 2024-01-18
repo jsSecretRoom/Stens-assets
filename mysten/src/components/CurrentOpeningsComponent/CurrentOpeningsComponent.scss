@@ -5,15 +5,22 @@
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
+    width: 100%;
+
+    @media (min-width: 1160px) {
+        width: 1130px;
+    }
+
     .dropdovn-Head {
         
         background-color: white;
         border-radius: 20px;
-        width: 1130px;
+        width: 100%;
         height: 100px;
         display: flex;
         justify-content: space-between;
         margin: 0;
+
         .drop-conteiner {
             display: flex;
             align-items: center;
@@ -23,10 +30,16 @@
                 color: #194484;
             }
         }
+
         button{
+            width: 160px;
             background-color: #06B25F;
+            display: none;
             &:hover{
                 background-color: #194484;
+            }
+            @media (min-width: 460px) {
+                display: block;
             }
         }
     }

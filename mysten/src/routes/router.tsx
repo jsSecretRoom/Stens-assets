@@ -26,16 +26,19 @@ import ArticlePage from '../pages/ArticlePage/ArticlePage';
 import ServicesSectionsPage from "../pages/ServicesSectionsPage/ServicesSectionsPage";
 import TechnologiesSectionsPage from '../pages/TechnologiesSectionsPage/TechnologiesSectionsPage';
 import AuthorSectionsPage from '../pages/AuthorSectionsPage/AuthorSectionsPage';
+import MainPopUpComponent from "../components/MainPopUpComponent/MainPopUpComponent";
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: (
             <>
+                <MainPopUpComponent/>
+
                 <HeaderComponent/>
                 <PagesContent/>
                 <FuterComponent/>
-                
+
             </>
         ),
         children: [

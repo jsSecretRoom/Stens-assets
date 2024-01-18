@@ -10,9 +10,13 @@
     .about-team-conteiner {
         display: flex;
         flex-wrap: wrap;
-        width: 1224px;
+        justify-content: center;
+        width: 100%;
         row-gap: 60px;
         column-gap: 50px;
+        @media (min-width: 1224px) {
+            width: 1224px;
+        }
         .user-card {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             border-radius: 20px;

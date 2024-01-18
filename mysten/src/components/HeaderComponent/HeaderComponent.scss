@@ -34,20 +34,6 @@ header{
             display: none;
             column-gap: 20px;
             justify-content: space-around;
-
-            .link-info{
-                font-size: 16px;
-                color: white;
-                &:hover{
-                    color: crimson;
-                }
-            }
-            .link-info.deco{
-                color: blue;
-                &:hover{
-                    color: crimson;
-                }
-            }
             
         }
         @media (min-width: 1000px) {

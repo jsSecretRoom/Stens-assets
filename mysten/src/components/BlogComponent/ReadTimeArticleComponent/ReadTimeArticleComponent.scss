@@ -1,0 +1,14 @@
+.read-time {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+   
+    img{
+        width: 24px;
+    }
+    p{
+        color: gray;
+        font-size: 16px;
+        
+    }
+}

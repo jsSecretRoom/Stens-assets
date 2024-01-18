@@ -2,7 +2,6 @@ import { NumberReducerStates, NumberAction } from "../TS-STATE";
 
 const initialState: NumberReducerStates = {
     globallCounter: 0,
-
 };
 
 export function NumberReducer(

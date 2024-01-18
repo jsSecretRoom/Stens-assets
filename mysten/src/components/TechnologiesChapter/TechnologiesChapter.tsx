@@ -14,9 +14,9 @@ function TechnologiesChapter() {
              high quality and engaging entertainment software</p>
             
             <div className='platforms-devlopeng'>
-                <button className='androidico'><img src={androidico} alt="androidico" /></button>
-                <button className='apleico'><img src={apleico} alt="apleico" /></button>
-                <button className='unityico'><img src={unityico} alt="unityico" /></button>
+                <NavLink to={'/home/Technologies/Android%20Technologies'} className='androidico'><img src={androidico} alt="androidico" /></NavLink>
+                <NavLink to={'/home/Technologies/iOS%20Technologies'} className='apleico'><img src={apleico} alt="apleico" /></NavLink>
+                <NavLink to={'/home/Technologies/Unity%20Technologies'} className='unityico'><img src={unityico} alt="unityico" /></NavLink>
             </div>
             <p>Our engineers develop applications for the most popular platforms.</p>
         </section>

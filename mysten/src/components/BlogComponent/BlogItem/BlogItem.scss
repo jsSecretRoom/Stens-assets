@@ -57,43 +57,13 @@
             column-gap: 20px;
             
             
-            .star-count {
-                display: flex;
-                justify-content: space-between;
-                .star {
-                    padding: 0;
-                    width: auto;
-                    height: auto;
-                    img{
-                        width: 24px;
-                    }
-                }
-            }
+
 
             .rest-feches{
                 display: flex;
                 align-items: center;
                 column-gap: 20px;
 
-                .read-time {
-                    display: flex;
-                    column-gap: 10px;
-                    img{}
-                    p{
-                        color: gray;
-                        font-size: 16px;
-                        
-                    }
-                }
-                .views {
-                    display: flex;
-                    column-gap: 10px;
-                    img{}
-                    p{
-                        color: gray;
-                        font-size: 16px;
-                    }
-                }
             }
 
 
@@ -117,24 +87,6 @@
             display: flex;
             align-items: center;
             column-gap: 20px;
-            
-            .autor-info {
-                display: flex;
-                align-items: center;
-                border-right: 2px solid gray;
-                padding-right: 20px;
-                img{}
-                p{
-                    color: gray;
-                    font-size: 16px;
-                }
-            }
-            .publication-date {
-                p{
-                    color: gray;
-                    font-size: 16px;
-                }
-            }
         }
     }
 }

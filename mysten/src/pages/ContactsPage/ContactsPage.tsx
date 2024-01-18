@@ -8,6 +8,7 @@ import MiniNavigationSystem from "../../components/MiniNavigationSystem/MiniNavi
 
 import decoImg from '../../assets/decoration/services-deco4.svg'
 import { NavLink } from "react-router-dom";
+import ContactsFormComponent from "../../components/ContactsFormComponent/ContactsFormComponent";
 
 function ContactsPage() {
     return ( 
@@ -18,13 +19,14 @@ function ContactsPage() {
                     <h2>Contact Us</h2>
                     <p>We are open for dialog and you are welcome to share your opinions or thoughts with us</p>
                 </div>
-                <div className="join-img">
-                    <img src={decoImg} alt="decoImg" />
+                <div className="form-conteiner">
+                    <ContactsFormComponent/>
                 </div>
-                <NavLink to={'/twerwe'}>ewrwerw</NavLink>
+                
             </section>
             <ForPartnerComponent/>
             <RecentProjectSlider/>
+            
         </Fragment>
     );
 }

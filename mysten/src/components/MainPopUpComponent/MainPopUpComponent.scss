@@ -1,0 +1,84 @@
+#mainPopUp-root{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    pointer-events: all;
+
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    
+    .mainPortal{
+        position: relative;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+
+        .main-portal-conteiner{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100svh;
+            height: auto;
+            background-color: white;
+            box-shadow: 10px 0 5px rgba(0, 0, 0, 0.4);
+            overflow-y: auto;
+
+            transform: translateX(-1000px);
+            transition: transform 0.7s ease-in-out;
+
+            @media (min-width: 500px) {
+                width: 425px;
+            }
+            .portal-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                padding: 20px;
+                height: auto;
+                .exit {
+                    display: flex;
+                    justify-content: right;
+                    button{
+                        width: auto;
+                        color: #06B25F;
+                        background: none;
+                        &:hover{
+                            border: 2px solid white;
+                        }
+                    }
+                }
+                .site-navigation {
+                    .links-group{
+                        flex-direction: column;
+                    }
+                }
+                .popup-contacts {
+                    .contact-button{
+                        width: auto;
+                        display: block;
+                        padding: 0 10px;
+                        border-color: #06B25F;
+                        color: #06B25F;
+                        &:hover{
+                            color: #ffffff;
+                        }
+                        
+                    }
+                }
+            }
+
+            
+        }
+        .main-portal-conteiner.activ{
+            transform: translateX(0);
+        }
+
+    }
+
+
+}

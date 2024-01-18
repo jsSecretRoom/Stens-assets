@@ -1,7 +1,7 @@
 import { BooleanReducerState, BooleanAction } from "../TS-STATE";
 
 const initialState: BooleanReducerState = {
-  authorized: false,
+  closeOpenMain: false,
 };
 
 export function BooleanReducer(
@@ -10,10 +10,10 @@ export function BooleanReducer(
   action: BooleanAction) : BooleanReducerState {
 
   switch (action.type) {
-    case 'SUCCESSFUL_AUTHORIZATION':
+    case 'MAIN_POP_UP_CONTROLLER':
       return {
         ...state,
-        authorized: action.payload,
+        closeOpenMain: action.payload,
       };
     default:
       return state;

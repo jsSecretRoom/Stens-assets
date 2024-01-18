@@ -1,12 +1,30 @@
-.contacts-header{
-    h2{
-        color: #194484;
-        text-align: left;
+.team-hed{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 28px;
+
+    @media (min-width: 768px) {
+        
+        padding: 0 110px;
     }
-    p{
-        color: black;
-        font-weight: bold;
-        text-align: left;
-        width: 470px;
+    @media (min-width: 1200px) {
+        width: 1200px;
+        
+    }
+    .contacts-header{
+        padding: 40px 0;
+        h2{
+            color: #194484;
+            text-align: left;
+        }
+        p{
+            color: black;
+            font-weight: bold;
+            text-align: left;
+            
+        }
+    }
+    .form-conteiner{
+        position: static;
     }
 }

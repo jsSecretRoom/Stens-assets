@@ -1,3 +1,4 @@
+import GradeArticleComponent from '../BlogComponent/GradeArticleComponent/GradeArticleComponent';
 import './EvaluateArticle.scss';
 
 
@@ -7,7 +8,7 @@ function EvaluateArticle() {
         <section className='evaluate-article'>
             <div className='evaluate-conteiner'>
                 <p>How helpful was this article?</p>
-                {/* component stars */}
+                <GradeArticleComponent/>
             </div>
         </section>
     );

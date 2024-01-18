@@ -5,9 +5,11 @@ import companyLogoNegativ from '../../assets/icon/company-logo-negativ.svg';
 import DropdownComponent from '../DropdownComponent/DropdownComponent';
 
 
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 import ContactsButton from '../../buttonsComponents/ContactsButton/ContactsButton';
 import MainBurgerButton from '../../buttonsComponents/MainBurgerButton/MainBurgerButton';
+import LinksGroupComponent from '../LinksGroupComponent/LinksGroupComponent';
 
 const serviceNames = [
     "Mobile Application Development",
@@ -46,9 +48,7 @@ function HeaderComponent() {
                 <section className='main-list'>
                     <DropdownComponent dropdownName={'Services'} serviceNames={serviceNames} />
                     <DropdownComponent dropdownName={'Technologies'} serviceNames={technologiesName} />
-                    <NavLink className={`link-info ${(pathnames === '/home') ? '' : 'deco'}`} to={'/home/Products'}>PRODUCTS</NavLink>
-                    <NavLink className={`link-info ${(pathnames === '/home') ? '' : 'deco'}`} to={'/home/Portfolio'}>PORTFOLIO</NavLink>
-                    <NavLink className={`link-info ${(pathnames === '/home') ? '' : 'deco'}`} to={'/home/Blog'}>BLOG</NavLink>
+                    <LinksGroupComponent/>
                     <DropdownComponent dropdownName={'About_us'} serviceNames={aboutAsName} />
                 </section>
                 <section className='ficha'>

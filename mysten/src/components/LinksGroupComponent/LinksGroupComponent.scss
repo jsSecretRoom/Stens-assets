@@ -1,0 +1,17 @@
+.links-group{
+    display: flex;
+    column-gap: 20px;
+    .link-info{
+        font-size: 16px;
+        color: rgb(41, 255, 22);
+        &:hover{
+            color: crimson;
+        }
+    }
+    .link-info.deco{
+        color: rgb(41, 255, 22);
+        &:hover{
+            color: crimson;
+        }
+    }
+}

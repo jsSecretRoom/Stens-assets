@@ -2,12 +2,12 @@
 
 //BooleanReducer-----------------------------------------------------------------------BooleanReducer
 export interface BooleanReducerState {
-    authorized: boolean,
+    closeOpenMain: boolean,
 
 }
 
 export type BooleanAction =
-| { type: 'SUCCESSFUL_AUTHORIZATION'; payload: boolean }
+| { type: 'MAIN_POP_UP_CONTROLLER'; payload: boolean }
 
 
 //NumberReducer------------------------------------------------------------------------NumberReducer

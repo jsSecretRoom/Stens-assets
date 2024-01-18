@@ -1,5 +1,5 @@
 //BooleanReducer-------------------------------------------------------------------------
-export const SetAutorisation = (togle: boolean) => ({
-    type: 'SUCCESSFUL_AUTHORIZATION',
+export const GetMainPortallState = (togle: boolean) => ({
+    type: 'MAIN_POP_UP_CONTROLLER',
     payload: togle,
 });
