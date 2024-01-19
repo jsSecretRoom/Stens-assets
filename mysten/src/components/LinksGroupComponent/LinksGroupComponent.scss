@@ -2,10 +2,13 @@
     display: flex;
     column-gap: 20px;
     .link-info{
-        font-size: 16px;
+        font-size: 24px;
         color: rgb(41, 255, 22);
         &:hover{
             color: crimson;
+        }
+        @media (min-width: 1000px) {
+            font-size: 16px;
         }
     }
     .link-info.deco{

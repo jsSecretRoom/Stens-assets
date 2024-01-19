@@ -2,6 +2,8 @@ import { BooleanReducerState, BooleanAction } from "../TS-STATE";
 
 const initialState: BooleanReducerState = {
   closeOpenMain: false,
+  closeOpenContacts: false,
+
 };
 
 export function BooleanReducer(
@@ -10,11 +12,16 @@ export function BooleanReducer(
   action: BooleanAction) : BooleanReducerState {
 
   switch (action.type) {
-    case 'MAIN_POP_UP_CONTROLLER':
+    case 'CONTACTS_POP_UP_CONTROLLER':
       return {
         ...state,
-        closeOpenMain: action.payload,
+        closeOpenContacts: action.payload,
       };
+    case 'MAIN_POP_UP_CONTROLLER':
+    return {
+      ...state,
+      closeOpenMain: action.payload,
+    };
     default:
       return state;
   }

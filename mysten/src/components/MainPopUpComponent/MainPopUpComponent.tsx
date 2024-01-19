@@ -8,13 +8,12 @@ import { GetMainPortallState } from '../../redux/Actions/BooleanActions';
 
 import ContactsButton from '../../buttonsComponents/ContactsButton/ContactsButton';
 import LinksGroupComponent from '../LinksGroupComponent/LinksGroupComponent';
+import MainPopUpDropdownComponent from './MainPopUpDropdownComponent/MainPopUpDropdownComponent';
 
 const MainPortalWrapper = ({ children, container } : {children: any, container: any}) => {
     return ReactDOM.createPortal(children, container);
 };
-
-
-
+ 
 const serviceNames = [
     "Mobile Application Development",
     "Game Development Outsourcing",
@@ -38,7 +37,7 @@ const aboutAsName = [
     "Contacts"
     
 ];
-
+ 
 function MainPopUpComponent() {
 
     const dispatch = useDispatch();
@@ -59,8 +58,10 @@ function MainPopUpComponent() {
                             <button onClick={togglePortal}>Close</button>
                         </section>
                         <section className='site-navigation'>
-                           <LinksGroupComponent/>
-                           
+                            <MainPopUpDropdownComponent dropdownName={'Services'} serviceNames={serviceNames}/>
+                            <MainPopUpDropdownComponent dropdownName={'Technologies'} serviceNames={technologiesName}/>
+                            <LinksGroupComponent/>
+                            <MainPopUpDropdownComponent dropdownName={'About_us'} serviceNames={aboutAsName}/>
                         </section>
                         <section className='popup-contacts'>
                             <ContactsButton/>

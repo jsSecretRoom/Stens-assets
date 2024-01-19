@@ -1,0 +1,20 @@
+.main-dropdown-content {
+    
+    .dropdown-name {
+        color: blue;
+        font-family: 'Harabara';
+        cursor: pointer;
+        display: flex;
+        column-gap: 10px;
+        img{
+            filter: invert(100%);
+            width: 24px;
+        }
+    }
+    .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+

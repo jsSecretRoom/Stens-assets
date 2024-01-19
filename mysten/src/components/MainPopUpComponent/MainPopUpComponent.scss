@@ -5,34 +5,35 @@
     z-index: 10;
     width: 100%;
     height: auto;
-    pointer-events: all;
+    
 
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
+    
     
     .mainPortal{
         position: relative;
         width: 100vw;
         display: flex;
         justify-content: center;
-
+        
         .main-portal-conteiner{
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             min-height: 100svh;
-            height: auto;
+            height: 100%;
             background-color: white;
             box-shadow: 10px 0 5px rgba(0, 0, 0, 0.4);
+            
             overflow-y: auto;
 
             transform: translateX(-1000px);
             transition: transform 0.7s ease-in-out;
 
-            @media (min-width: 500px) {
-                width: 425px;
+            @media (min-width: 365px) {
+                width: 345px;
             }
             .portal-content{
                 display: flex;

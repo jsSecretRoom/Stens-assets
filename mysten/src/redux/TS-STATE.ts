@@ -3,11 +3,13 @@
 //BooleanReducer-----------------------------------------------------------------------BooleanReducer
 export interface BooleanReducerState {
     closeOpenMain: boolean,
+    closeOpenContacts: boolean,
 
 }
 
 export type BooleanAction =
 | { type: 'MAIN_POP_UP_CONTROLLER'; payload: boolean }
+| { type: 'CONTACTS_POP_UP_CONTROLLER'; payload: boolean }
 
 
 //NumberReducer------------------------------------------------------------------------NumberReducer

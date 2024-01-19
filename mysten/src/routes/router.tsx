@@ -27,14 +27,17 @@ import ServicesSectionsPage from "../pages/ServicesSectionsPage/ServicesSections
 import TechnologiesSectionsPage from '../pages/TechnologiesSectionsPage/TechnologiesSectionsPage';
 import AuthorSectionsPage from '../pages/AuthorSectionsPage/AuthorSectionsPage';
 import MainPopUpComponent from "../components/MainPopUpComponent/MainPopUpComponent";
+import ContactsPopUpComponent from "../components/ContactsPopUpComponent/ContactsPopUpComponent";
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: (
             <>
+                
+                <ContactsPopUpComponent/>
                 <MainPopUpComponent/>
-
+                
                 <HeaderComponent/>
                 <PagesContent/>
                 <FuterComponent/>
