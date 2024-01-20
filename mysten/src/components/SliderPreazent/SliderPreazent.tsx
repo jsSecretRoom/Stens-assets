@@ -61,13 +61,13 @@ function SliderPreazent() {
                             <div className='slide-content'>
                                 <div className='setings-position-component'>
                                     <h3>stan’s assets - IT Outsourcing Development Company</h3>
-                                    <NavLink to={''}>FOCUS ON THE PRODUCT AND LET US DO THE REST!</NavLink>
+                                    <NavLink to={'/home/Products'}>FOCUS ON THE PRODUCT AND LET US DO THE REST!</NavLink>
                     
                                     {(windowWidth < 1080) ? '' : <ParagraphsSlider/> } 
                                     
                                     <div className='button-conteiner' >
-                                        <button>MORE</button>
-                                        <button>Contact us</button>
+                                        <NavLink to={'/home/About_us/Specialization'}>MORE</NavLink>
+                                        <NavLink to={'/home/About_us/Contacts'}>Contact</NavLink>
                                     </div>
                                 </div>
                             </div>

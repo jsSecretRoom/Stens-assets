@@ -7,9 +7,9 @@ interface propDropDovn {
     mainText: string
 }
 
-function DropInfoComponent({ droupDownItem }: { droupDownItem: propDropDovn }) {
+function DropInfoComponent({ droupDownItem, isActive }: {isActive: boolean, droupDownItem: propDropDovn }) {
 
-    const [isShou, setIsShow] = useState(false);
+    const [isShou, setIsShow] = useState(isActive);
 
     const shouMoreContent = () => {
         setIsShow(!isShou);

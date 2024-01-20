@@ -6,9 +6,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './RecentProjectSlider.scss';
 
-import slide1 from '../../assets/recent-slider-img/Group 700.png'
-import slide2 from '../../assets/recent-slider-img/Mask Group.png'
-import slide3 from '../../assets/recent-slider-img/image 3.png'
+import slide2 from '../../assets/recent-slider-img/Group 700.png'
+import slide3 from '../../assets/recent-slider-img/Mask Group.png'
+import slide1 from '../../assets/recent-slider-img/image 3.png'
 
 const sliders = [
     {
@@ -67,47 +67,43 @@ function RecentProjectSlider() {
     }
 
     return ( 
-        
-        <section className='slider-conteiner'>
-            <div className='slider'>
-                <NavLink to={''}>Recent Projects</NavLink>
-                <Slider {...settings}>
+        <div className='slider'>
+            <NavLink to={'/'}>Recent Projects</NavLink>
+            <Slider {...settings}>
 
-                    {sliders.map((item, id) => (
-                        <div>
-                            <div className='ricent-slider'>
-                                <div className='foto'>
-                                    <img src={item.img} alt={`slide${id}`} />
-                                </div>
-                                <div className='description'>
-                                    <NavLink to={''}>{item.header}</NavLink>
-                                    <div className='parafraph-conteiner'>
-                                        <p>{item.paragraph}</p>
-                                    </div>
+                {sliders.map((item, id) => (
+                    <div>
+                        <div className='ricent-slider'>
+                            <div className='foto'>
+                                <img src={item.img} alt={`slide${id}`} />
+                            </div>
+                            <div className='description'>
+                                <NavLink to={''}>{item.header}</NavLink>
+                                <div className='parafraph-conteiner'>
+                                    <p>{item.paragraph}</p>
                                 </div>
                             </div>
                         </div>
-                    ))} 
-                    {sliders.map((item, id) => (
-                        <div>
-                            <div className='ricent-slider'>
-                                <div className='foto'>
-                                    <img src={item.img} alt={`slide${id}`} />
-                                </div>
-                                <div className='description'>
-                                    <NavLink to={''}>{item.header}</NavLink>
-                                    <div className='parafraph-conteiner'>
-                                        <p>{item.paragraph}</p>
-                                    </div>
+                    </div>
+                ))} 
+                {sliders.map((item, id) => (
+                    <div>
+                        <div className='ricent-slider'>
+                            <div className='foto'>
+                                <img src={item.img} alt={`slide${id}`} />
+                            </div>
+                            <div className='description'>
+                                <NavLink to={''}>{item.header}</NavLink>
+                                <div className='parafraph-conteiner'>
+                                    <p>{item.paragraph}</p>
                                 </div>
                             </div>
                         </div>
-                    ))} 
+                    </div>
+                ))} 
 
-                </Slider>
-            </div>
-        </section>
-        
+            </Slider>
+        </div>
     );
 }
 

@@ -78,7 +78,17 @@
                                     justify-content: left;
                                         
                                 }
-                                button{}
+                                a{
+                                    border-radius: 5px;
+                                    border: 2px solid white;
+                                    width: 240px;
+                                    text-align: center;
+                                    color: white;
+                                    &:hover{
+                                        background-color: #06B25F;
+                                        
+                                    }
+                                }
                             }
                         }
                         

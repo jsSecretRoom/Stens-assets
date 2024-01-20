@@ -8,6 +8,10 @@
         display: flex;
         column-gap: 20px;
         text-align: left;
+        border: none;
+        &:hover{
+            background: none;
+        }
         img{}
         h2{
             color: black;

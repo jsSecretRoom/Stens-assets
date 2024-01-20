@@ -34,7 +34,9 @@ function HomePage() {
             <Achievements/>
             <section className='parther-setings'>
                 <div className="deco-header"><img src={decoHeader} alt="decoHeader" /></div>
-                <PartnersComponent/>
+                <div className="decobody">
+                    <PartnersComponent/>
+                </div>
                 <div className="deco-footer"><img src={decoFooter} alt="decoFooter" /></div>
             </section>
             <ContactsComponent/>

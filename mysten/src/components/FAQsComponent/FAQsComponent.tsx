@@ -45,7 +45,7 @@ function FAQsComponent() {
             </div>
             <div className='state-chapters'>
                 {mainText.map((item, index) => (
-                    <DropInfoComponent droupDownItem={item} key={index}/>
+                    <DropInfoComponent droupDownItem={item} isActive={(index === 0) ? true : false} key={index}/>
                 ))}
             </div>
         </section>

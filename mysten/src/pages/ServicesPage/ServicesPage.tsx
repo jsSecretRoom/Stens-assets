@@ -13,6 +13,8 @@ import MiniNavigationSystem from "../../components/MiniNavigationSystem/MiniNavi
 import decoHeader from '../../assets/company-logo/header-decoration.svg';
 import decoFooter from '../../assets/company-logo/footer-Decoration.svg';
 
+import './ServicesPage.scss';
+
 function ServicesPage() {
     return ( 
         
@@ -28,7 +30,9 @@ function ServicesPage() {
             <ContactsComponent/>
             <section className='parther-setings'>
                 <div className="deco-header"><img src={decoHeader} alt="decoHeader" /></div>
+                <section className='slider-conteiner'>
                     <RecentProjectSlider/>
+                </section>
                 <div className="deco-footer"><img src={decoFooter} alt="decoFooter" /></div>
             </section>
             

@@ -10,7 +10,7 @@ import ContactsFormComponent from '../ContactsFormComponent/ContactsFormComponen
 function ContactsComponent() {
     return ( 
         <section className='contacts'>
-            <NavLink to={''}>CONTACTS</NavLink>
+            <NavLink to={'/home/About_us/Contacts'}>CONTACTS</NavLink>
             <div className='welcome'>
                 <p>We are open for dialog and you are welcome to share your opinions or thoughts with us</p>
                 <p>Hit us up any time through email with any idea and help us turn your great ideas into brilliant projects</p>

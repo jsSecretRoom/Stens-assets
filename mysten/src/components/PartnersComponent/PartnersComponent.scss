@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     padding: 0 140px;
-    background-color: #b8ccff22;
     a{
         font-size: 36px;
         text-align: center;
@@ -31,9 +30,14 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(75, 75, 75, 0.633);
 
+            &:hover{
+                box-shadow: 0 0 10px rgb(17, 49, 255);
+                scale: 1.05;
+            }
+
             &:nth-child(even) {
                 opacity: 0;
-                transform: translateX(60px);
+                transform: translateY(60px);
                 transform: translateY(-60px);
                 animation: fadeIn 1s forwards;
     
@@ -54,7 +58,6 @@
                 transform: translateX(-60px);
                 transform: translateY(60px);
                 animation: fadeIn 1s forwards;
-    
                 animation: fadeInOdd 1s forwards;
     
                 
@@ -68,10 +71,7 @@
                 }
             }
 
-            &:hover{
-                box-shadow: 0 0 10px rgb(17, 49, 255);
-                scale: 1.05;
-            }
+
 
             img{
                 width: 146px;

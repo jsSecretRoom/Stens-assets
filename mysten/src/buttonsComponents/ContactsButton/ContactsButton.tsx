@@ -5,7 +5,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { GetContactsPortallState } from '../../redux/Actions/BooleanActions';
 import { RootState } from '../../redux/RootReducer';
 
-function ContactsButton() {
+function ContactsButton({buttonContent}) {
+    if(buttonContent === undefined){
+        buttonContent = 'CONTACT US';
+    }
 
     const dispatch = useDispatch();
 
@@ -17,7 +20,7 @@ function ContactsButton() {
 
     return ( 
         <button onClick={() => dispatch(GetContactsPortallState(!mainPortallState))} className={`contact-button ${pathnames === '/home' ? '' : 'deco'}`}>
-            CONTACT US
+            {buttonContent}
         </button>
     );
 }

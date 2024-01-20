@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    
     @media (min-width: 860px) {
         padding: 0 110px;
     }
@@ -23,7 +24,7 @@
         border-radius: 10px;
         align-items: center;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    
+        background-color: white;
         @media (min-width: 860px) {
             flex-direction: row;
             height: 138px;

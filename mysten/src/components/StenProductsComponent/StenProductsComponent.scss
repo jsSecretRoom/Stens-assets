@@ -12,6 +12,7 @@
     .productCard {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         border-radius: 20px;
+        
         .img-block {
             position: relative;
             
@@ -71,6 +72,7 @@
         .information {
             width: 320px;
             height: 140px;
+            padding: 10px;
             border-radius: 0 0 20px 20px;
             @media (min-width: 460px) {
                 width: 420px;

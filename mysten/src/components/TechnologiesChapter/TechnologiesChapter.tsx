@@ -8,8 +8,8 @@ import unityico from '../../assets/icon/unity.svg';
 function TechnologiesChapter() {
     return ( 
         <section className='texnologies'>
-            <NavLink to={''}>Technologies</NavLink>
-            <p><span><NavLink to={''}>Stan’s Assets</NavLink> </span>is a team of developers that are committed to developing
+            <NavLink to={'/home/Technologies/Android%20Technologies'}>Technologies</NavLink>
+            <p><span><NavLink to={'/home/Products'}>Stan’s Assets</NavLink> </span>is a team of developers that are committed to developing
             <br />
              high quality and engaging entertainment software</p>
             

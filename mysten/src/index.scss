@@ -21,8 +21,9 @@ body {
   width: 100%;
   overflow-x: hidden;
 
-  background: url('./assets//img/bacground2.png') no-repeat center center fixed;
-  background-size: cover;
+  background: url('./assets/decoration/pngwing.com.png') 0 0/auto 100% repeat-y;
+  background-size:  100% auto;
+  
 
   @font-face {
     font-family: 'Harabara';
