@@ -40,7 +40,14 @@ function DropdownComponent({ dropdownName, serviceNames }: { dropdownName: strin
     <div className="dropdown" ref={dropdownRef}>
       <p onClick={toggleDropdown} style={{ color: pathnames === '/home' ? 'white' : 'blue' }}>
         {dropdownName.toUpperCase()}
-        <img src={droupdovnArrou} alt="droupdovnArrou" />
+        <img src={droupdovnArrou}  
+          alt="droupdovnArrou" 
+          style={{
+            filter: pathnames === '/home' ? 'none' : 'invert(1)',
+            transform: isOpen ? 'rotate(0deg)' : 'rotate(180deg)',
+          }}
+        />
+          
       </p>
       {isOpen && (
         <div className="dropdown-content">

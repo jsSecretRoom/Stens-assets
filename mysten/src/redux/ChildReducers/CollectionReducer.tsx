@@ -1,7 +1,7 @@
 import { CollectionReducerState, CollectionAction } from "../TS-STATE";
 
 const initialState: CollectionReducerState = {
-  collectionsName: [],
+  gradeCount: [],
 
 };
  
@@ -11,10 +11,10 @@ export function CollectionReducer(
   action: CollectionAction ) : CollectionReducerState {
     
   switch (action.type) {
-    case 'GET_COLLECTION_NAME':
+    case 'GET_GRADE_COUNT':
       return {
         ...state,
-        collectionsName: action.payload,
+        gradeCount: action.payload,
       };
     default:
       return state;

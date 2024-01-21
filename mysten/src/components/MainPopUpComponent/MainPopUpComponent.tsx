@@ -65,7 +65,6 @@ function MainPopUpComponent() {
                         </section>
                         <section className='popup-contacts'>
                             <ContactsButton/>
-                            
                         </section>
                     </div>
                 </div>

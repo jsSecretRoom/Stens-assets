@@ -13,44 +13,51 @@ import arapp from '../../assets/services-images/arapp.svg'
 const cardObjects = [
     {
         cardimg: phone,
-        cardtxt: 'Mobile Application Development'
+        cardtxt: 'Mobile Application Development',
+        linkPath: '/home/Services/Mobile%20Application%20Development'
     },
     {
         cardimg: jostic,
-        cardtxt: 'Game development outsourcing'
+        cardtxt: 'Game development outsourcing',
+        linkPath: '/home/Services/Game%20Development%20Outsourcing'
     },
     {
         cardimg: vr,
-        cardtxt: 'vr app development'
+        cardtxt: 'vr app development',
+        linkPath: '/home/Services/VR%20App%20Development'
     },
     {
         cardimg: user,
-        cardtxt: 'Dedicated Developers'
+        cardtxt: 'Dedicated Developers',
+        linkPath: '/home/Services/Dedicated%20Developers'
     },
     {
         cardimg: setings,
-        cardtxt: 'sdk development'
+        cardtxt: 'sdk development',
+        linkPath: '/home/Services/SDK%20Development'
     },
     {
         cardimg: cube,
-        cardtxt: 'sdk 3d modeling '
+        cardtxt: 'sdk 3d modeling ',
+        linkPath: '/home/Services/3D%20Modeling%20Services'
     },
     {
         cardimg: arapp,
-        cardtxt: 'ar app development'
+        cardtxt: 'ar app development',
+        linkPath: '/home/Services/AR%20App%20Development'
     }
 ]
 
 function CardForServicesComponent() {
     return ( 
         <section className="card-for-services">
-            <NavLink to={''}>Services</NavLink>
+            <p>Services</p>
             <div className="card-conteiner">
                 {cardObjects.map((item, index) => (
                     <div className="services-card" key={index}>
                         <img src={item.cardimg} alt="cardimg"/>
                         <div className="card-paragraph">
-                            <NavLink to={''}>{item.cardtxt}</NavLink>
+                            <NavLink to={item.linkPath}>{item.cardtxt}</NavLink>
                         </div>
                     </div>
                 ))}

@@ -1,6 +1,6 @@
 import './MainPopUpDropdownComponent.scss';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useDispatch } from 'react-redux';
 import { GetMainPortallState } from '../../../redux/Actions/BooleanActions';
@@ -11,11 +11,19 @@ function MainPopUpDropdownComponent({dropdownName, serviceNames}) {
     const dispatch = useDispatch();
     const windowWidth = window.innerWidth;
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
+
+    useEffect(() => {
+
+        if(windowWidth <= 768){
+            setIsOpen(false);
+        }
+
+    },[windowWidth]);
 
     const closePopup = () => {
         if(windowWidth <= 450){
@@ -43,7 +51,7 @@ function MainPopUpDropdownComponent({dropdownName, serviceNames}) {
                         </NavLink>
                     ))}
                 </div>
-            )};
+            )}
         </section>
     );
 }

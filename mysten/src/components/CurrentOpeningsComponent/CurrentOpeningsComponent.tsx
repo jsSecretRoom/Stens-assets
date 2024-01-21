@@ -14,7 +14,7 @@ function CurrentOpeningsComponent({developNumber, initialstate} : {developNumber
         <section className='dropdovn-block'>
             <button onClick={dropdownActivator} className='dropdovn-Head' style={isDrop ? { borderRadius: '20px 20px 0 0', backgroundColor: '#81ff76' } : {}}>
                 <div className='drop-conteiner'>
-                    <img src={dropdownArrou} alt="dropdownArrou" />
+                    <img src={dropdownArrou} alt="dropdownArrou" style={{ transform: isDrop ? 'rotate(0deg)' : 'rotate(180deg)' }}/>
                     <p>{developNumber}</p>
                 </div>
                 <button>Apply</button>

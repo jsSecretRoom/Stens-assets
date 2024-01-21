@@ -1,11 +1,48 @@
 import './ClutchComponent.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
 import clutchIo from '../../assets/icon/Clucch.svg';
-import star from '../../assets/icon/Star 5.svg';
+import star from '../../assets/icon/rightStar.svg';
+
+import { setGradeCount } from '../../redux/Actions/CollectionActions';
+import { RootState } from '../../redux/RootReducer';
+import { useSelector, useDispatch } from 'react-redux';
 
 function ClutchComponent() {
+    const dispatch = useDispatch();
     const [votersCount, setVotersCount] = useState(0);
-    const [grade, setGrade] = useState(0);
+    const [totalwalue, setTotalwalue] = useState(0);
+
+    const totallGradeArray = useSelector((state: RootState) => state.getcollection.gradeCount);
+    
+    const [hoverWidth, setHoverWidth] = useState(0);
+    const [totallGradeWidth, setTotallGradeWidth] = useState(0);
+    console.log(totallGradeArray);
+    const gradeDocument = (value: number) => {
+        setVotersCount((votersCount) => votersCount + 1);
+        dispatch(setGradeCount([...totallGradeArray, value]));
+    }
+
+    useEffect(() => {
+        if (totallGradeArray && totallGradeArray.length > 0) {
+            const total = totallGradeArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            const totalgrade = total / totallGradeArray.length;
+
+            const roundedTotalGrade = totalgrade.toFixed(1);
+
+            const width = totalgrade * 20;
+            setTotallGradeWidth(width);
+            setTotalwalue(roundedTotalGrade);
+        }
+    }, [totallGradeArray]);
+
+    const handleStarHover = (value: number) => {
+      // Обработка наведения на звезду 
+      // Каждая звезда увеличивает ширину на 20
+      const width = value * 20; 
+      setHoverWidth(width);
+    };
+    
     return ( 
         <section className='clutch-conteiner'>
             <div className='clutch'>
@@ -13,16 +50,25 @@ function ClutchComponent() {
                     <img src={clutchIo} alt="clutchIo" />
                 </div>
                 <div className='clutch-fica'>
-                    <div className='grade'><p>{grade}</p></div>
+                    <div className='grade'><p>{totalwalue}</p></div>
                     <div className="star-container">
                         <div className='star-count'>
-                            <button className="star" value={1}><img src={star} alt="star"/></button>
-                            <button className="star" value={2}><img src={star} alt="star"/></button>
-                            <button className="star" value={3}><img src={star} alt="star"/></button>
-                            <button className="star" value={4}><img src={star} alt="star"/></button>
-                            <button className="star" value={5}><img src={star} alt="star"/></button>
+                            {[1, 2, 3, 4, 5].map((value) => (
+                                <button
+                                    key={value}
+                                    className="star"
+                                    value={value}
+                                    onClick={() => gradeDocument(value)}
+                                    onMouseEnter={() => handleStarHover(value)}
+                                    onMouseLeave={() => setHoverWidth(0)}
+                                >
+                                    <img src={star} alt="star" />
+                                </button>
+                            ))}
                         </div>
-                        <div className='Like-line'></div>
+                        <div className='default-line'></div>
+                        <div className='Like-line' style={{ width: totallGradeWidth + '%' }}></div>
+                        <div className='user-hover'style={{ width: hoverWidth + '%' }}></div>
                     </div>
                     <div className='number-of-voters'><p>{votersCount} reviews</p></div>
                 </div>

@@ -68,12 +68,15 @@
                             h3{
                                 
                             }
-                            a{}
+                            a{
+                                font-size: 24px;
+                            }
 
                             .button-conteiner{
                                 column-gap: 20px;
                                 display: flex;
                                 justify-content: center;
+
                                 @media (min-width: 1080px) {
                                     justify-content: left;
                                         
@@ -84,6 +87,7 @@
                                     width: 240px;
                                     text-align: center;
                                     color: white;
+                                    font-size: 24px;
                                     &:hover{
                                         background-color: #06B25F;
                                         

@@ -33,9 +33,9 @@ export type StringAction =
 
 //CollectionReducer-------------------------------------------------------------------CollectionReducer
 export interface CollectionReducerState {
-    collectionsName: string[],
+    gradeCount: number[],
 };
 
 export type CollectionAction =
-| { type: 'GET_COLLECTION_NAME'; payload: string[] }
+| { type: 'GET_GRADE_COUNT'; payload: number[] }
 

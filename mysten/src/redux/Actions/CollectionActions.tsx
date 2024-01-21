@@ -1,6 +1,6 @@
 import { CollectionAction } from '../TS-STATE';
 
-export const setNameCollections = (addCollection: string[]): CollectionAction => ({
-    type: 'GET_COLLECTION_NAME',
+export const setGradeCount = (addCollection: number[]): CollectionAction => ({
+    type: 'GET_GRADE_COUNT',
     payload: addCollection,
 });

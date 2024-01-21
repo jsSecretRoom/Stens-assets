@@ -20,6 +20,7 @@
         .user-card {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             border-radius: 20px;
+
             .fteam-foro {
                 width: 322px;
                 img{
@@ -31,6 +32,7 @@
                 padding: 10px;
                 display: flex;
                 flex-direction: column;
+                background-color: white;
                 a{
                     text-align: left;
                 }
