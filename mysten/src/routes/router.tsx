@@ -28,6 +28,7 @@ import TechnologiesSectionsPage from '../pages/TechnologiesSectionsPage/Technolo
 import AuthorSectionsPage from '../pages/AuthorSectionsPage/AuthorSectionsPage';
 import MainPopUpComponent from "../components/MainPopUpComponent/MainPopUpComponent";
 import ContactsPopUpComponent from "../components/ContactsPopUpComponent/ContactsPopUpComponent";
+import JoinUsPopUpComponent from "../components/JoinUsPopUpComponent/JoinUsPopUpComponent";
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
                 
                 <ContactsPopUpComponent/>
                 <MainPopUpComponent/>
+                <JoinUsPopUpComponent/>
                 
                 <HeaderComponent/>
                 <PagesContent/>

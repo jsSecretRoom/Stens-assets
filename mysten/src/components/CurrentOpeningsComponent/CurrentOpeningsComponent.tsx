@@ -2,6 +2,7 @@ import  './CurrentOpeningsComponent.scss';
 
 import dropdownArrou from '../../assets//icon/arrou-Vector.svg';
 import { useState } from 'react';
+import ApplyDropdovnButton from '../../buttonsComponents/ApplyDropdovnButton/ApplyDropdovnButton';
 
 function CurrentOpeningsComponent({developNumber, initialstate} : {developNumber : string , initialstate: boolean}) {
     const [isDrop, setIsDrop] = useState(initialstate);
@@ -12,13 +13,13 @@ function CurrentOpeningsComponent({developNumber, initialstate} : {developNumber
 
     return ( 
         <section className='dropdovn-block'>
-            <button onClick={dropdownActivator} className='dropdovn-Head' style={isDrop ? { borderRadius: '20px 20px 0 0', backgroundColor: '#81ff76' } : {}}>
+            <section onClick={dropdownActivator} className='dropdovn-Head' style={isDrop ? { borderRadius: '20px 20px 0 0', backgroundColor: '#81ff76' } : {}}>
                 <div className='drop-conteiner'>
                     <img src={dropdownArrou} alt="dropdownArrou" style={{ transform: isDrop ? 'rotate(0deg)' : 'rotate(180deg)' }}/>
                     <p>{developNumber}</p>
                 </div>
-                <button>Apply</button>
-            </button>
+                <ApplyDropdovnButton teamCategoryValue={developNumber}/>
+            </section>
 
 
             {isDrop ? 
