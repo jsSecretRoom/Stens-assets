@@ -1,18 +1,16 @@
 import './DropdownComponent.scss';
 
+import { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react'; // Import useEffect and useRef
-
 import droupdovnArrou from '../../assets/icon/drop-arrou.svg';
 
-function DropdownComponent({ dropdownName, serviceNames }: { dropdownName: string, serviceNames: string[] }) {
-
+function DropdownComponent({ dropdownName, serviceNames }: { dropdownName: string; serviceNames: string[] }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const location = useLocation();
   const pathnames = location.pathname;
 
-  const dropdownRef = useRef(null); // Create a ref for the dropdown component
+  const dropdownRef = useRef<HTMLDivElement | null>(null); // Specify the type for useRef
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -29,8 +27,8 @@ function DropdownComponent({ dropdownName, serviceNames }: { dropdownName: strin
     return () => {
       document.body.removeEventListener('click', handleClickOutside);
     };
-    
-  }, []); // Empty dependency array means this effect will run once on mount
+
+  }, [dropdownRef]); // Include dropdownRef in the dependency array to avoid potential issues
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -40,14 +38,14 @@ function DropdownComponent({ dropdownName, serviceNames }: { dropdownName: strin
     <div className="dropdown" ref={dropdownRef}>
       <p onClick={toggleDropdown} style={{ color: pathnames === '/home' ? 'white' : 'blue' }}>
         {dropdownName.toUpperCase()}
-        <img src={droupdovnArrou}  
-          alt="droupdovnArrou" 
+        <img
+          src={droupdovnArrou}
+          alt="droupdovnArrou"
           style={{
             filter: pathnames === '/home' ? 'none' : 'invert(1)',
             transform: isOpen ? 'rotate(0deg)' : 'rotate(180deg)',
           }}
         />
-          
       </p>
       {isOpen && (
         <div className="dropdown-content">

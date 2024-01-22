@@ -6,7 +6,7 @@ import { RootState } from '../../redux/RootReducer';
 function ApplyDropdovnButton({teamCategoryValue}: {teamCategoryValue: string}) {
     const dispatch = useDispatch();
     const joinUsPortallState = useSelector((state: RootState ) => state.getboolean.closeOpenJoinUs);
-
+    console.log(teamCategoryValue)
 
     const getJoinUsPopUp = (e: any) => {
         e.stopPropagation()

@@ -21,21 +21,20 @@ interface ImageMap {
     [key: string]: string;
 }
 
-const chouseImg = {
-    '/home/Services/Mobile%20Application%20Development' : deco1,
-    '/home/Services/Game%20Development%20Outsourcing' : deco2,
-    '/home/Services/VR%20App%20Development' : deco3,
-    '/home/Services/Dedicated%20Developers' : deco4,
-    '/home/Services/SDK%20Development' : deco5,
-    '/home/Services/3D%20Modeling%20Services' : deco6,
-    '/home/Services/AR%20App%20Development' : deco7,
+const chouseImg: ImageMap = {
+    '/home/Services/Mobile%20Application%20Development': deco1,
+    '/home/Services/Game%20Development%20Outsourcing': deco2,
+    '/home/Services/VR%20App%20Development': deco3,
+    '/home/Services/Dedicated%20Developers': deco4,
+    '/home/Services/SDK%20Development': deco5,
+    '/home/Services/3D%20Modeling%20Services': deco6,
+    '/home/Services/AR%20App%20Development': deco7,
     '/home/Technologies/Android%20Technologies': androidImg,
     '/home/Technologies/iOS%20Technologies': iosImg,
     '/home/Technologies/Unity%20Technologies': unityImg,
     '/home/Products': unityImg,
     '/home/Portfolio': deco2,
-
-}
+  };
 
  
 function TitleComponent() {
