@@ -6,8 +6,8 @@ import ForPartnerComponent from "../../components/ForPartnerComponent/ForPartner
 import RecentProjectSlider from "../../components/RecentProjectSlider/RecentProjectSlider";
 import MiniNavigationSystem from "../../components/MiniNavigationSystem/MiniNavigationSystem";
 
-import decoImg from '../../assets/decoration/services-deco4.svg'
-import { NavLink } from "react-router-dom";
+// import decoImg from '../../assets/decoration/services-deco4.svg'
+// import { NavLink } from "react-router-dom";
 import ContactsFormComponent from "../../components/ContactsFormComponent/ContactsFormComponent";
 
 function ContactsPage() {

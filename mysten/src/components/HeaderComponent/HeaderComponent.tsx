@@ -53,7 +53,7 @@ function HeaderComponent() {
                     <DropdownComponent dropdownName={'About_us'} serviceNames={aboutAsName} />
                 </section>
                 <section className='ficha'>
-                    <ContactsButton/>
+                    <ContactsButton buttonContent={''}/>
                     <MainBurgerButton/>
                 </section>
             </div>

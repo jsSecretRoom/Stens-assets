@@ -10,30 +10,30 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function ClutchComponent() {
     const dispatch = useDispatch();
-    const [votersCount, setVotersCount] = useState(0);
-    const [totalwalue, setTotalwalue] = useState(0);
-
-    const totallGradeArray = useSelector((state: RootState) => state.getcollection.gradeCount);
+    const [votersCount, setVotersCount] = useState<number>(0);
+    const [totalValue, setTotalValue] = useState<number>(0);
+  
+    const totallGradeArray: number[] = useSelector((state: RootState) => state.getcollection.gradeCount);
     
-    const [hoverWidth, setHoverWidth] = useState(0);
-    const [totallGradeWidth, setTotallGradeWidth] = useState(0);
-    console.log(totallGradeArray);
-    const gradeDocument = (value: number) => {
-        setVotersCount((votersCount) => votersCount + 1);
-        dispatch(setGradeCount([...totallGradeArray, value]));
+    const [hoverWidth, setHoverWidth] = useState<number>(0);
+    const [totallGradeWidth, setTotallGradeWidth] = useState<number>(0);
+  
+    const gradeDocument = (value: number): void => {
+      setVotersCount((votersCount) => votersCount + 1);
+      dispatch(setGradeCount([...totallGradeArray, value]));
     }
-
+  
     useEffect(() => {
-        if (totallGradeArray && totallGradeArray.length > 0) {
-            const total = totallGradeArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-            const totalgrade = total / totallGradeArray.length;
-
-            const roundedTotalGrade = totalgrade.toFixed(1);
-
-            const width = totalgrade * 20;
-            setTotallGradeWidth(width);
-            setTotalwalue(roundedTotalGrade);
-        }
+      if (totallGradeArray && totallGradeArray.length > 0) {
+        const total = totallGradeArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        const totalgrade = total / totallGradeArray.length;
+  
+        const roundedTotalGrade: string = totalgrade.toFixed(1);
+  
+        const width: number = totalgrade * 20;
+        setTotallGradeWidth(width);
+        setTotalValue(Number(roundedTotalGrade));
+      }
     }, [totallGradeArray]);
 
     const handleStarHover = (value: number) => {
@@ -50,7 +50,7 @@ function ClutchComponent() {
                     <img src={clutchIo} alt="clutchIo" />
                 </div>
                 <div className='clutch-fica'>
-                    <div className='grade'><p>{totalwalue}</p></div>
+                    <div className='grade'><p>{totalValue}</p></div>
                     <div className="star-container">
                         <div className='star-count'>
                             {[1, 2, 3, 4, 5].map((value) => (

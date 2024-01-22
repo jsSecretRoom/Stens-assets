@@ -17,6 +17,10 @@ import unityImg from '../../assets/technologies-img/unity-img.svg';
 
 import { useEffect } from 'react';
 
+interface ImageMap {
+    [key: string]: string;
+}
+
 const chouseImg = {
     '/home/Services/Mobile%20Application%20Development' : deco1,
     '/home/Services/Game%20Development%20Outsourcing' : deco2,

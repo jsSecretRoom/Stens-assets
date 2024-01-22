@@ -41,7 +41,7 @@ function JoinUsPopUpComponent() {
                                     <input type="text" name="" id="" placeholder='Please Attach your CV File...'/>
                                     <button className='sellect-file'>Select file</button>
                                 </div>
-                                <textarea name="" id="" cols="30" rows="10" placeholder='Message'>
+                                <textarea name="" id="" cols={30} rows={10} placeholder='Message'>
 
                                 </textarea>
                             </form>

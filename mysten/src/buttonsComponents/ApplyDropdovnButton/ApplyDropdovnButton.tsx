@@ -3,12 +3,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { JoinUsPortallState } from '../../redux/Actions/BooleanActions';
 import { RootState } from '../../redux/RootReducer';
 
-function ApplyDropdovnButton({teamCategoryValue}) {
+function ApplyDropdovnButton({teamCategoryValue}: {teamCategoryValue: string}) {
     const dispatch = useDispatch();
     const joinUsPortallState = useSelector((state: RootState ) => state.getboolean.closeOpenJoinUs);
 
 
-    const getJoinUsPopUp = (e) => {
+    const getJoinUsPopUp = (e: any) => {
         e.stopPropagation()
         dispatch(JoinUsPortallState(!joinUsPortallState));
     }

@@ -11,7 +11,7 @@ import WiewsCountComponent from '../WiewsCountComponent/WiewsCountComponent';
 import AuthorInfoComponent from '../AuthorInfoComponent/AuthorInfoComponent';
 import ArticleDateComponent from '../ArticleDateComponent/ArticleDateComponent';
 
-function BlogItem({ title, content, author, article }) {
+function BlogItem({ title, content, author, article }: {title: string, content: string, author: string, article: string}) {
     return ( 
 
         <NavLink to={`/home/Blog/${article}`} className='item'>

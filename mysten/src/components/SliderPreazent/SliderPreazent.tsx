@@ -30,9 +30,9 @@ function SliderPreazent() {
         autoplay: true,
         autoplaySpeed: 10000,
         fade: true,
-        beforeChange: ( current, next) => setCurrentSlide(next),
+        beforeChange: ( _current : any, next: any) => setCurrentSlide(next),
         
-        customPaging: function (i) {
+        customPaging: function (i: any) {
             const isActive = i === currentSlide;
             const backgroundColor = isActive ? 'white' : 'transparent';
 

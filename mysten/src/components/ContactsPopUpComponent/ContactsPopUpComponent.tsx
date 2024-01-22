@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { GetContactsPortallState } from '../../redux/Actions/BooleanActions';
 import { RootState } from '../../redux/RootReducer'; 
-import ContactsComponent from '../ContactsComponent/ContactsComponent';
+// import ContactsComponent from '../ContactsComponent/ContactsComponent';
 import ContactsFormComponent from '../ContactsFormComponent/ContactsFormComponent';
 
 const ContactsPortalWrapper = ({ children, container } : {children: any, container: any}) => {

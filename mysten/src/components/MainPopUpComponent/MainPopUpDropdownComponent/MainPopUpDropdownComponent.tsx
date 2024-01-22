@@ -7,7 +7,7 @@ import { GetMainPortallState } from '../../../redux/Actions/BooleanActions';
 
 import droupdovnArrou from '../../../assets/icon/drop-arrou.svg';
 
-function MainPopUpDropdownComponent({dropdownName, serviceNames}) {
+function MainPopUpDropdownComponent({dropdownName, serviceNames}: {dropdownName: string, serviceNames: string[]}) {
     const dispatch = useDispatch();
     const windowWidth = window.innerWidth;
 
@@ -25,7 +25,7 @@ function MainPopUpDropdownComponent({dropdownName, serviceNames}) {
 
     },[windowWidth]);
 
-    const closePopup = () => {
+    const closePopup = ( ) => {
         if(windowWidth <= 450){
             dispatch(GetMainPortallState(false));
         }
@@ -46,7 +46,7 @@ function MainPopUpDropdownComponent({dropdownName, serviceNames}) {
             {isOpen && (
                 <div className='dropdown-content'>
                     {serviceNames.map((item, index) => (
-                        <NavLink key={index} to={`/home/${dropdownName}/${item}`} onClick={() => closePopup(false)}>
+                        <NavLink key={index} to={`/home/${dropdownName}/${item}`} onClick={() => closePopup()}>
                             {item}
                         </NavLink>
                     ))}

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-export const faindWidthWindow = (setWindowWidth) => {
+export const faindWidthWindow = (setWindowWidth: any) => {
     useEffect(() => {
         
         // Функция, которая будет вызвана при изменении размеров окна

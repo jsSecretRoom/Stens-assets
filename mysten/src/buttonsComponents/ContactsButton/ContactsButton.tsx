@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { GetContactsPortallState } from '../../redux/Actions/BooleanActions';
 import { RootState } from '../../redux/RootReducer';
 
-function ContactsButton({buttonContent}) {
+function ContactsButton({buttonContent}: {buttonContent: string}) {
     if(buttonContent === undefined){
         buttonContent = 'CONTACT US';
     }
