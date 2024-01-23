@@ -12,12 +12,21 @@
     a{font-size: 36px;} 
     
     .welcome{
-        p{color: black;}
+        @media (max-width: 768px) {
+            background-color: rgba(97, 189, 255, 0.292);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            padding: 5px;
+        }
+        p{
+            color: black;
+        }
     }
     
     .contacts-conteiner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         flex-direction: column;
         row-gap: 60px;
         @media (min-width: 1233px) {

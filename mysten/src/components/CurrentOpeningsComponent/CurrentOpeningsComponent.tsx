@@ -6,6 +6,7 @@ import ApplyDropdovnButton from '../../buttonsComponents/ApplyDropdovnButton/App
 
 function CurrentOpeningsComponent({developNumber, initialstate} : {developNumber : string , initialstate: boolean}) {
     const [isDrop, setIsDrop] = useState(initialstate);
+    const windowWidth = window.innerWidth;
 
     const dropdownActivator = () => {
         setIsDrop((isDrop) => !isDrop)
@@ -18,7 +19,7 @@ function CurrentOpeningsComponent({developNumber, initialstate} : {developNumber
                     <img src={dropdownArrou} alt="dropdownArrou" style={{ transform: isDrop ? 'rotate(0deg)' : 'rotate(180deg)' }}/>
                     <p>{developNumber}</p>
                 </div>
-                <ApplyDropdovnButton teamCategoryValue={developNumber}/>
+                {(windowWidth <= 460) ? '' : <ApplyDropdovnButton teamCategoryValue={developNumber}/> }
             </section>
 
 
@@ -62,6 +63,7 @@ function CurrentOpeningsComponent({developNumber, initialstate} : {developNumber
                             <li>Committed to learning and sharing with the team to help achieve overall goals.</li>
                         </ul>
                     </div>
+                    {(windowWidth <= 460) ? <ApplyDropdovnButton teamCategoryValue={developNumber}/> : '' }
                 </div>
 
                 :

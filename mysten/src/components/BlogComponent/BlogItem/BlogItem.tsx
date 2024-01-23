@@ -5,11 +5,12 @@ import { NavLink } from 'react-router-dom';
 import postImg from '../../../assets/blog-img/Frame 5.svg';
 import autorImg from '../../../assets/blog-img/autor.svg';
 
-import GradeArticleComponent from '../GradeArticleComponent/GradeArticleComponent';
+// import GradeArticleComponent from '../GradeArticleComponent/GradeArticleComponent';
 import ReadTimeArticleComponent from '../ReadTimeArticleComponent/ReadTimeArticleComponent';
 import WiewsCountComponent from '../WiewsCountComponent/WiewsCountComponent';
 import AuthorInfoComponent from '../AuthorInfoComponent/AuthorInfoComponent';
 import ArticleDateComponent from '../ArticleDateComponent/ArticleDateComponent';
+import StarGradeConteiner from '../../StarGradeConteiner/StarGradeConteiner';
 
 function BlogItem({ title, content, author, article }: {title: string, content: string, author: string, article: string}) {
     return ( 
@@ -21,7 +22,7 @@ function BlogItem({ title, content, author, article }: {title: string, content: 
             <div className='item-blog'>
                 <div className='fiches'>
 
-                    <GradeArticleComponent/>
+                    <StarGradeConteiner/>
 
                     <div className='rest-feches'>
                         <ReadTimeArticleComponent/>

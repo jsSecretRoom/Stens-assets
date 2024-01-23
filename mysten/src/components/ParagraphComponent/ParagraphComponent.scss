@@ -20,7 +20,16 @@
         h3{
             color: #0D6EB7;
         }
-        p{font-size: 16px;}
+        p{
+            font-size: 16px;
+            @media (max-width: 768px) {
+                background-color: rgba(97, 189, 255, 0.292);
+                border-radius: 10px;
+                backdrop-filter: blur(10px);
+                padding: 5px;
+            }
+
+        }
     }
 }
 

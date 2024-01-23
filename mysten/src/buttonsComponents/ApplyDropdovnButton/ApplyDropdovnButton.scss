@@ -2,12 +2,9 @@
     width: 160px;
     
     background-color: #06B25F;
-    display: none;
+    display: block;
     
     &:hover{
         background-color: #194484;
-    }
-    @media (min-width: 460px) {
-        display: block;
     }
 }

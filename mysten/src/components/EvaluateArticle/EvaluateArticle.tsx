@@ -1,4 +1,5 @@
-import GradeArticleComponent from '../BlogComponent/GradeArticleComponent/GradeArticleComponent';
+
+import StarGradeConteiner from '../StarGradeConteiner/StarGradeConteiner';
 import './EvaluateArticle.scss';
 
 
@@ -8,7 +9,7 @@ function EvaluateArticle() {
         <section className='evaluate-article'>
             <div className='evaluate-conteiner'>
                 <p>How helpful was this article?</p>
-                <GradeArticleComponent/>
+                <StarGradeConteiner/>
             </div>
         </section>
     );

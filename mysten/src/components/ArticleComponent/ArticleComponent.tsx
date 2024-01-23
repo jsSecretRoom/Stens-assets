@@ -6,12 +6,13 @@ import EvaluateArticle from '../EvaluateArticle/EvaluateArticle';
 
 import share from '../../assets/icon/share 1.svg';
 import articleimg from '../../assets/aticle/Frame 7.svg';
-import GradeArticleComponent from '../BlogComponent/GradeArticleComponent/GradeArticleComponent';
+
 import ReadTimeArticleComponent from '../BlogComponent/ReadTimeArticleComponent/ReadTimeArticleComponent';
 import WiewsCountComponent from '../BlogComponent/WiewsCountComponent/WiewsCountComponent';
 import AuthorInfoComponent from '../BlogComponent/AuthorInfoComponent/AuthorInfoComponent';
 import ArticleDateComponent from '../BlogComponent/ArticleDateComponent/ArticleDateComponent';
 import ArticleCreatorComponent from '../BlogComponent/ArticleCreatorComponent/ArticleCreatorComponent';
+import StarGradeConteiner from '../StarGradeConteiner/StarGradeConteiner';
 
 
 
@@ -26,17 +27,19 @@ function ArticleComponent() {
             <div className='feaces-conteiner'>
                 <div className='article-fiches'>
 
-                    <GradeArticleComponent/>
+                    
                     <div className='group-conteiner'>
+                        <StarGradeConteiner/>
                         <div className='rest-group'>
                             <ReadTimeArticleComponent/>
                             <WiewsCountComponent/>
+                            
+                            <button className='share'>
+                                <img src={share} alt="share" />
+                            </button>
                         </div>
 
 
-                        <button className='share'>
-                            <img src={share} alt="share" />
-                        </button>
                     </div>
 
                     

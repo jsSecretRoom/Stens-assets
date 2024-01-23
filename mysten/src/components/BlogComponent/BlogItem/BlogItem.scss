@@ -55,9 +55,15 @@
             flex-wrap: wrap;
             align-items: center;
             column-gap: 20px;
-            
-            
 
+            .clutch-fica{
+                .grade{
+                    display: none;
+                }
+                .number-of-voters{
+                    display: none;
+                }
+            }
 
             .rest-feches{
                 display: flex;

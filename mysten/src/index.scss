@@ -6,6 +6,7 @@
   height: 100%;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 1);
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,7 +21,7 @@ body {
   justify-content: center;
   width: 100%;
   overflow-x: hidden;
-
+  
   background: url('./assets/decoration/pngwing.com.png') 0 0/auto 100% repeat-y;
   background-size:  100% auto;
   
@@ -178,6 +179,7 @@ input::-ms-clear {
 }
 textarea{
   border: 1px solid gray;
+  background-color: white;
   border-radius: 5px;
   width: 100%;
   max-width: 240px;

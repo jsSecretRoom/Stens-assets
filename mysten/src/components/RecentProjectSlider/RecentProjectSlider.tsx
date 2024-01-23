@@ -67,7 +67,7 @@ function RecentProjectSlider() {
     }
 
     return ( 
-        <div className='slider'>
+        <div className='recent-slider'>
             <NavLink to={'/'}>Recent Projects</NavLink>
             <Slider {...settings}>
 

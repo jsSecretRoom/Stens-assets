@@ -1,9 +1,11 @@
 .autor-article {
     display: flex;
     flex-direction: column;
-    padding: 0 28px;
+    padding: 28px;
     row-gap: 40px;
-    
+    background-color: rgba(255, 255, 255, 0.413);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
     width: 100%;
     @media (min-width: 900px) {
         width: 900px;
@@ -15,6 +17,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
 
 
         .article-fiches {
@@ -28,30 +33,39 @@
             }
             
             .group-conteiner{
+                flex-direction: column;
+                @media (min-width: 720px) {
+                    flex-direction: row;
+                }
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
-
+                .clutch-fica{
+                    justify-content: left;
+                }
 
                 .rest-group{
                     display: flex;
                     column-gap: 20px;
-                }
-                .share{
-                    width: auto;
-                    padding: 0;
-                    padding-left: 15px;
-                    margin: 0;
-                    &:hover{
-                        background: none;
-                        border-radius: none;
-                        scale: 1.2;
+                    width: 100%;
+                    justify-content: space-between;
+                    .share{
+                        width: auto;
+                        padding: 0;
+                        padding-left: 15px;
+                        margin: 0;
+                        &:hover{
+                            background: none;
+                            border-radius: none;
+                            scale: 1.2;
+                        }
+                        
+                        img{
+                            width: 24px;
+                        }
                     }
-                    
-                    img{
-                        width: 24px;
-                    }
                 }
+                
             }
         }
 

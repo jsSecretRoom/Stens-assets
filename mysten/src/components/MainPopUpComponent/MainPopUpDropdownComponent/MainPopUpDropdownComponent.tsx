@@ -38,7 +38,7 @@ function MainPopUpDropdownComponent({dropdownName, serviceNames}: {dropdownName:
                 <img
                     src={droupdovnArrou}
                     alt="droupdovnArrou"
-                    style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                    style={{ transform: isOpen ? 'rotate(0deg)' : 'rotate(180deg)' }}
                 />
                 {dropdownName.toUpperCase()}
                 
