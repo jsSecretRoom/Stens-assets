@@ -64,7 +64,7 @@ function MainPopUpComponent() {
                             <MainPopUpDropdownComponent dropdownName={'About_us'} serviceNames={aboutAsName}/>
                         </section>
                         <section className='popup-contacts'>
-                            <ContactsButton buttonContent={''}/>
+                            <ContactsButton buttonContent={'CONTACT US'}/>
                         </section>
                     </div>
                 </div>
